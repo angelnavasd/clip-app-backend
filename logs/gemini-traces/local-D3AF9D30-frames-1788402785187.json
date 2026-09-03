@@ -1,0 +1,61 @@
+{
+  "videoId": "local-D3AF9D30",
+  "createdAt": "2026-09-03T02:33:05.186Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 6,
+    "base64KB": 130
+  },
+  "frameMeta": [
+    {
+      "id": "b0t553.085",
+      "timestamp": 553.085,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "conflict",
+      "bytes": 21796
+    },
+    {
+      "id": "b0t558.6949999999999",
+      "timestamp": 558.6949999999999,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "conflict",
+      "bytes": 22016
+    },
+    {
+      "id": "b1t665.125",
+      "timestamp": 665.125,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "hook",
+      "bytes": 22596
+    },
+    {
+      "id": "b1t672.255",
+      "timestamp": 672.255,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "hook",
+      "bytes": 22236
+    },
+    {
+      "id": "b2t696.555",
+      "timestamp": 696.555,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 21952
+    },
+    {
+      "id": "b2t699.585",
+      "timestamp": 699.585,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 22060
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"b0t553.085\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b0t558.6949999999999\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b1t665.125\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b1t672.255\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b2t696.555\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b2t699.585\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95}]}"
+}

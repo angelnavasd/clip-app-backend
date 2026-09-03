@@ -1,0 +1,77 @@
+{
+  "videoId": "local-0902D860",
+  "createdAt": "2026-09-03T04:14:32.041Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 8,
+    "base64KB": 176
+  },
+  "frameMeta": [
+    {
+      "id": "b0t157.26999999999998",
+      "timestamp": 157.26999999999998,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22180
+    },
+    {
+      "id": "b0t166.85",
+      "timestamp": 166.85,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22008
+    },
+    {
+      "id": "b1t257.395",
+      "timestamp": 257.395,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "mystery",
+      "bytes": 22956
+    },
+    {
+      "id": "b1t262.265",
+      "timestamp": 262.265,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "mystery",
+      "bytes": 22976
+    },
+    {
+      "id": "b2t329.89",
+      "timestamp": 329.89,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "conflict",
+      "bytes": 22596
+    },
+    {
+      "id": "b2t338.83000000000004",
+      "timestamp": 338.83000000000004,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "conflict",
+      "bytes": 22480
+    },
+    {
+      "id": "b3t786.76",
+      "timestamp": 786.76,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 22964
+    },
+    {
+      "id": "b3t797.04",
+      "timestamp": 797.04,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 21568
+    }
+  ],
+  "rawResponse": "{\n  \"status\": \"success\",\n  \"frames\": [\n    {\n      \"id\": \"b0t157.26999999999998\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b0t166.85\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b1t257.395\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b1t262.265\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b2t329.89\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b2t338.83000000000004\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95,\n      \"faceX\": 85\n    },\n    {\n      \"id\": \"b3t786.76\",\n      \"scene\": \"talking_head\",\n      \"speakerZone\": \"center\",\n      \"pipCorner\": \"none\",\n      \"confidence\": 0.95,\n      \"faceX\": 45\n    },\n    {\n      \"id\": \"b3t797.04\",\n      \"scene\": \"talking_head\",\n      \"speakerZone\": \"center\",\n      \"pipCorner\": \"none\",\n      \"confidence\": 0.95,\n      \"faceX\": 45\n    }\n  ]\n}"
+}

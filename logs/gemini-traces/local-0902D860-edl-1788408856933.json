@@ -1,0 +1,199 @@
+{
+  "videoId": "local-0902D860",
+  "createdAt": "2026-09-03T04:14:16.932Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El modelo anónimo que humilló a Google",
+      "viralScore": 95,
+      "hook": ".3 flash ok ahora el tweet pero esto esto es lo que dice un modelo sin nombre sin luego tipo sin en preci sin equipo de relaciones públicas simplemente hizo que Google",
+      "timeRange": {
+        "start": 441.3,
+        "end": 729.4
+      },
+      "cutSegments": [
+        {
+          "start": 451.22,
+          "end": 550.4,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 561.12,
+          "end": 670.5,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 675.82,
+          "end": 719.6,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "desesperado",
+          "timestamp": 454.1,
+          "color": "#FF3B30",
+          "sfx": "impact"
+        },
+        {
+          "word": "hype",
+          "timestamp": 556.1,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "voz",
+          "timestamp": 674.6,
+          "color": "#00E5FF",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 441.3,
+          "end": 451.22,
+          "role": "hook",
+          "text": ".3 flash ok ahora el tweet pero esto esto es lo que dice un modelo sin nombre sin luego tipo sin en preci sin equipo de relaciones públicas simplemente hizo que Google",
+          "needsFace": true,
+          "energyScore": 84,
+          "sentenceIds": [
+            "S58"
+          ]
+        },
+        {
+          "start": 550.4,
+          "end": 561.12,
+          "role": "conflict",
+          "text": "Miles de millones en computación y la red de distribución más grande del mundo está tomando prestado el hype porque creo que acá el hype de un modelo que literalmente no tiene",
+          "needsFace": false,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S79"
+          ]
+        },
+        {
+          "start": 670.5,
+          "end": 675.82,
+          "role": "development",
+          "text": "Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala.",
+          "needsFace": false,
+          "energyScore": 51,
+          "sentenceIds": [
+            "S95"
+          ]
+        },
+        {
+          "start": 719.6,
+          "end": 729.4,
+          "role": "climax",
+          "text": "los puntos de referencia muestran que está aproximadamente a la par, ok, no es revolucionario, ok, la amenaza es como el sin nombre, con seores cursos capturó más \"MineShare\" en tres días",
+          "needsFace": false,
+          "energyScore": 68,
+          "sentenceIds": [
+            "S105"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "La verdad detrás del misterioso OX Alpha",
+      "viralScore": 92,
+      "hook": "recordemos que Deep -Six lanzó hace poco Deep -Six V4 Flash, este que fue, bueno, falaba locura porque también era muy económico, logró suirón de precios, bueno, a todo este tema, bueno aquí hice luego de 56 días seguido, estándo Deep -Six en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido,",
+      "timeRange": {
+        "start": 152.48,
+        "end": 802.18
+      },
+      "cutSegments": [
+        {
+          "start": 171.64,
+          "end": 254.96,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 264.7,
+          "end": 325.42,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 343.3,
+          "end": 781.62,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "secreto",
+          "timestamp": 261.6,
+          "color": "#FF3B30",
+          "sfx": "impact"
+        },
+        {
+          "word": "chino",
+          "timestamp": 791.4,
+          "color": "#34C759",
+          "sfx": "cash"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 152.48,
+          "end": 171.64,
+          "role": "hook",
+          "text": "recordemos que Deep -Six lanzó hace poco Deep -Six V4 Flash, este que fue, bueno, falaba locura porque también era muy económico, logró suirón de precios, bueno, a todo este tema, bueno aquí hice luego de 56 días seguido, estándo Deep -Six en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido,",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S20",
+            "S21"
+          ]
+        },
+        {
+          "start": 254.96,
+          "end": 264.7,
+          "role": "mystery",
+          "text": "capacidad de cómputo solamente la puede tener Google en un momento también se dijo que podría hacer algún modelo secreto de Microsoft.",
+          "needsFace": false,
+          "energyScore": 75,
+          "sentenceIds": [
+            "S35"
+          ]
+        },
+        {
+          "start": 325.42,
+          "end": 343.3,
+          "role": "conflict",
+          "text": "no, no era un modelo de Google, el Google nunca tuvo nada que ver, inclusive luego, luego de que ya pasó todo esto porque realidad se supo que modelo era este, si no me equivoco hace dos días, el 26 creo o el 25, no estoy tan seguro pero bueno se supo que el modelo era gm5 .3 flash y empezaron algunos que vayan",
+          "needsFace": false,
+          "energyScore": 76,
+          "sentenceIds": [
+            "S43",
+            "S44"
+          ]
+        },
+        {
+          "start": 781.62,
+          "end": 802.18,
+          "role": "solution",
+          "text": "pero que este modelo se pudo prover de esa manera gracias a que corrió 100 % en tecnología china en un chip que era totalmente chino entonces esa es la novedad vamos a ver qué se dice en estas semanas con respecto el tema y cualquier cosa bueno así que nada espero que les haya gustado espero que",
+          "needsFace": false,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S115",
+            "S116"
+          ]
+        }
+      ]
+    }
+  ]
+}

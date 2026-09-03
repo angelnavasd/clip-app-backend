@@ -1,0 +1,178 @@
+{
+  "videoId": "local-910B7653",
+  "createdAt": "2026-09-03T02:43:23.730Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El misterio de OX Alpha y cómo humilló a Google",
+      "viralScore": 96,
+      "hook": "Ok, ahora el tweet, pero esto es lo que dice, un modelo sin nombre, sin logotipo, sin empresas y sin equipo de relaciones públicas, simplemente hizo que Google se,",
+      "timeRange": {
+        "start": 442.72,
+        "end": 675.8
+      },
+      "cutSegments": [
+        {
+          "start": 452.12,
+          "end": 550.48,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 561.5,
+          "end": 670.66,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "modelo",
+          "timestamp": 445.4,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "Google",
+          "timestamp": 450.9,
+          "color": "#FF3B30",
+          "sfx": "impact"
+        },
+        {
+          "word": "hype",
+          "timestamp": 556.1,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "fuerte",
+          "timestamp": 674.8,
+          "color": "#00E5FF",
+          "sfx": "riser"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 442.72,
+          "end": 452.12,
+          "role": "hook",
+          "text": "Ok, ahora el tweet, pero esto es lo que dice, un modelo sin nombre, sin logotipo, sin empresas y sin equipo de relaciones públicas, simplemente hizo que Google se,",
+          "needsFace": true,
+          "energyScore": 84,
+          "sentenceIds": [
+            "S63"
+          ]
+        },
+        {
+          "start": 550.48,
+          "end": 561.5,
+          "role": "conflict",
+          "text": "Miles de millones en computación y la red de distribución más grande del mundo, está tomando prestado el hype, porque creo que acá el hype, de un modelo que literalmente no tiene marca.",
+          "needsFace": false,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S90",
+            "S91"
+          ]
+        },
+        {
+          "start": 670.66,
+          "end": 675.8,
+          "role": "solution",
+          "text": "cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala",
+          "needsFace": false,
+          "energyScore": 63,
+          "sentenceIds": [
+            "S109"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "La verdad tras el modelo misterioso que destronó a DeepSeek",
+      "viralScore": 93,
+      "hook": "se luego de 56 días seguido estando DeepSeek en el puesto número 1, lo destronó el oikis alpha con 2 .6 trillones de tokens consumido.",
+      "timeRange": {
+        "start": 161.48,
+        "end": 761.84
+      },
+      "cutSegments": [
+        {
+          "start": 171.66,
+          "end": 286.11,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 297.02,
+          "end": 739.95,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "DeepSeek",
+          "timestamp": 163.9,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FF3B30",
+          "sfx": "impact"
+        },
+        {
+          "word": "GLM5",
+          "timestamp": 286.7,
+          "color": "#00E5FF",
+          "sfx": "pop"
+        },
+        {
+          "word": "chinos",
+          "timestamp": 761,
+          "color": "#FFCC00",
+          "sfx": "riser"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 161.48,
+          "end": 171.66,
+          "role": "hook",
+          "text": "se luego de 56 días seguido estando DeepSeek en el puesto número 1, lo destronó el oikis alpha con 2 .6 trillones de tokens consumido.",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S23"
+          ]
+        },
+        {
+          "start": 286.11,
+          "end": 297.02,
+          "role": "conflict",
+          "text": "el modelo era GLM5 .3 Flash, no lo he utilizado, así que bueno, la única contribución de Google en todo este asunto real es el nombre Flash, porque de ahí de la",
+          "needsFace": false,
+          "energyScore": 74,
+          "sentenceIds": [
+            "S43"
+          ]
+        },
+        {
+          "start": 739.95,
+          "end": 761.84,
+          "role": "solution",
+          "text": "Y aparte casi me olvido, aparte el tema del cómputo, el misterio del cómputo, el misterio de por qué pudieron probarlo, que es la novedad realmente en este modelo y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos.",
+          "needsFace": false,
+          "energyScore": 71,
+          "sentenceIds": [
+            "S124",
+            "S125"
+          ]
+        }
+      ]
+    }
+  ]
+}

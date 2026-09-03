@@ -1,0 +1,125 @@
+{
+  "videoId": "debug-video1",
+  "createdAt": "2026-09-03T03:42:30.367Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 14,
+    "base64KB": 161
+  },
+  "frameMeta": [
+    {
+      "id": "clip_01_b0t0",
+      "timestamp": 445.71,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 10952
+    },
+    {
+      "id": "clip_01_b0t1",
+      "timestamp": 451.71,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 11048
+    },
+    {
+      "id": "clip_01_b1t0",
+      "timestamp": 564.45,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 10776
+    },
+    {
+      "id": "clip_01_b1t1",
+      "timestamp": 570.35,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 11032
+    },
+    {
+      "id": "clip_01_b2t0",
+      "timestamp": 671.74,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 10928
+    },
+    {
+      "id": "clip_01_b2t1",
+      "timestamp": 674.46,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 11012
+    },
+    {
+      "id": "clip_02_b0t0",
+      "timestamp": 163.86,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 12568
+    },
+    {
+      "id": "clip_02_b0t1",
+      "timestamp": 169.1,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 12728
+    },
+    {
+      "id": "clip_02_b1t0",
+      "timestamp": 289.17,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 13556
+    },
+    {
+      "id": "clip_02_b1t1",
+      "timestamp": 296.01,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 13836
+    },
+    {
+      "id": "clip_02_b2t0",
+      "timestamp": 753.85,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "reveal",
+      "bytes": 11812
+    },
+    {
+      "id": "clip_02_b2t1",
+      "timestamp": 759.21,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "reveal",
+      "bytes": 11708
+    },
+    {
+      "id": "clip_02_b3t0",
+      "timestamp": 780.75,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 11056
+    },
+    {
+      "id": "clip_02_b3t1",
+      "timestamp": 788.49,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 11708
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"clip_01_b0t0\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_01_b0t1\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_01_b1t0\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_01_b1t1\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_01_b2t0\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_01_b2t1\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_02_b0t0\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85},{\"id\":\"clip_02_b0t1\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85},{\"id\":\"clip_02_b1t0\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85},{\"id\":\"clip_02_b1t1\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85},{\"id\":\"clip_02_b2t0\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85},{\"id\":\"clip_02_b2t1\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":50},{\"id\":\"clip_02_b3t0\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55},{\"id\":\"clip_02_b3t1\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":50}]}"
+}

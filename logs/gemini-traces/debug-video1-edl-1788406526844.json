@@ -1,0 +1,193 @@
+{
+  "videoId": "debug-video1",
+  "createdAt": "2026-09-03T03:35:26.844Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El modelo anónimo que humilló a Google",
+      "viralScore": 94,
+      "hook": "ok, ahora el tweet, pero esto es lo que dice, un modelo sin nombre, sin logotipo, sin empresas y sin equipo de relaciones públicas, simplemente hizo que Google se viera desesperado,",
+      "timeRange": {
+        "start": 442.71,
+        "end": 675.82
+      },
+      "cutSegments": [
+        {
+          "start": 454.71,
+          "end": 561.5,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 573.3,
+          "end": 670.38,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "desesperado,",
+          "timestamp": 454.1,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "0",
+          "timestamp": 564,
+          "color": "#FFCC00",
+          "sfx": "impact"
+        },
+        {
+          "word": "fuerte",
+          "timestamp": 674.9,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 442.71,
+          "end": 454.71,
+          "role": "hook",
+          "text": "ok, ahora el tweet, pero esto es lo que dice, un modelo sin nombre, sin logotipo, sin empresas y sin equipo de relaciones públicas, simplemente hizo que Google se viera desesperado,",
+          "needsFace": true,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S91"
+          ]
+        },
+        {
+          "start": 561.5,
+          "end": 573.3,
+          "role": "conflict",
+          "text": "todo el presupuesto de marketing de OX Alpha fue de 0 dólares, su equipo de relaciones públicas era inexistente, su entidad de marcar a un espacio en blanco, y dominó la conversación más que cualquier cosa",
+          "needsFace": false,
+          "energyScore": 54,
+          "sentenceIds": [
+            "S118",
+            "S119",
+            "S120"
+          ]
+        },
+        {
+          "start": 670.38,
+          "end": 675.82,
+          "role": "solution",
+          "text": "cuando cada compañía gritan, mira nuestro nuevo modelo, la que no dice nada se convierte en la voz más fuerte de la sala,",
+          "needsFace": false,
+          "energyScore": 48,
+          "sentenceIds": [
+            "S139"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "El misterio de OX Alpha y la tecnología China",
+      "viralScore": 91,
+      "hook": "Bueno, aquí hice luego de 56 días seguido, estando DeepSeek en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido.",
+      "timeRange": {
+        "start": 161.24,
+        "end": 792.36
+      },
+      "cutSegments": [
+        {
+          "start": 171.72,
+          "end": 285.74,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 299.44,
+          "end": 751.16,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 761.9,
+          "end": 776.88,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "impact"
+        },
+        {
+          "word": "Flash,",
+          "timestamp": 295.1,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "chinos,",
+          "timestamp": 761.1,
+          "color": "#FFCC00",
+          "sfx": "dramatic"
+        },
+        {
+          "word": "100",
+          "timestamp": 787,
+          "color": "#FFCC00",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 161.24,
+          "end": 171.72,
+          "role": "hook",
+          "text": "Bueno, aquí hice luego de 56 días seguido, estando DeepSeek en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido.",
+          "needsFace": true,
+          "energyScore": 53,
+          "sentenceIds": [
+            "S41"
+          ]
+        },
+        {
+          "start": 285.74,
+          "end": 299.44,
+          "role": "conflict",
+          "text": "el modelo era GLM5 .3 Flash, no lo he utilizado, así que bueno, la única contribución de Google en todo este asunto real es el nombre Flash, porque de la diga delante no tenía absolutamente nada que ver.",
+          "needsFace": false,
+          "energyScore": 58,
+          "sentenceIds": [
+            "S64",
+            "S65"
+          ]
+        },
+        {
+          "start": 751.16,
+          "end": 761.9,
+          "role": "reveal",
+          "text": "y es que cuando lo anunciaron oficialmente, se dijo que este modelo, corría completamente en chips que eran chinos,",
+          "needsFace": false,
+          "energyScore": 48,
+          "sentenceIds": [
+            "S160",
+            "S161",
+            "S162",
+            "S163"
+          ]
+        },
+        {
+          "start": 776.88,
+          "end": 792.36,
+          "role": "solution",
+          "text": "estoy como para profundizar demasiado, pero bueno, sé que hay todo un tema, pero que este nuevo modelo, se pudo probar de esa manera, gracias a que corrió 100 % en tecnología China, en un chip que era totalmente chinos,",
+          "needsFace": false,
+          "energyScore": 52,
+          "sentenceIds": [
+            "S168",
+            "S169"
+          ]
+        }
+      ]
+    }
+  ]
+}

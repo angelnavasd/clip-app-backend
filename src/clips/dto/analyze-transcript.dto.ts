@@ -27,6 +27,14 @@ export class WordTimestampDto {
   isFiller?: boolean;
 }
 
+export class SilenceGapDto {
+  @IsNumber()
+  start: number;
+
+  @IsNumber()
+  end: number;
+}
+
 export class AnalyzeTranscriptDto {
   @IsString()
   videoId: string;
@@ -39,5 +47,21 @@ export class AnalyzeTranscriptDto {
   videoDuration: number;
 
   @IsArray()
-  words: any[];
+  @ValidateNested({ each: true })
+  @Type(() => WordTimestampDto)
+  words: WordTimestampDto[];
+
+  @IsArray()
+  @IsOptional()
+  @ValidateNested({ each: true })
+  @Type(() => SilenceGapDto)
+  silenceGaps?: SilenceGapDto[];
+
+  @IsString()
+  @IsOptional()
+  targetDuration?: string;
+
+  @IsString()
+  @IsOptional()
+  genre?: string;
 }

@@ -1,0 +1,77 @@
+{
+  "videoId": "local-D3AF9D30",
+  "createdAt": "2026-09-03T02:33:12.510Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 8,
+    "base64KB": 178
+  },
+  "frameMeta": [
+    {
+      "id": "b0t163.79500000000002",
+      "timestamp": 163.79500000000002,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22084
+    },
+    {
+      "id": "b0t169.02499999999998",
+      "timestamp": 169.02499999999998,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22220
+    },
+    {
+      "id": "b1t257.485",
+      "timestamp": 257.485,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 22992
+    },
+    {
+      "id": "b1t262.295",
+      "timestamp": 262.295,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 22948
+    },
+    {
+      "id": "b2t753.8399999999999",
+      "timestamp": 753.8399999999999,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "revelation",
+      "bytes": 22820
+    },
+    {
+      "id": "b2t759.1600000000001",
+      "timestamp": 759.1600000000001,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "revelation",
+      "bytes": 23156
+    },
+    {
+      "id": "b3t788.05",
+      "timestamp": 788.05,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 22820
+    },
+    {
+      "id": "b3t790.71",
+      "timestamp": 790.71,
+      "clipId": "clip_02",
+      "beatId": "beat_3",
+      "role": "solution",
+      "bytes": 23052
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"b0t163.79500000000002\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95},{\"id\":\"b0t169.02499999999998\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95},{\"id\":\"b1t257.485\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95},{\"id\":\"b1t262.295\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95},{\"id\":\"b2t753.8399999999999\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95},{\"id\":\"b2t759.1600000000001\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b3t788.05\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b3t790.71\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95}]}"
+}

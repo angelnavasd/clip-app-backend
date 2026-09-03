@@ -1,0 +1,61 @@
+{
+  "videoId": "local-910B7653",
+  "createdAt": "2026-09-03T02:43:29.790Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 6,
+    "base64KB": 129
+  },
+  "frameMeta": [
+    {
+      "id": "b0t445.07000000000005",
+      "timestamp": 445.07000000000005,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 21780
+    },
+    {
+      "id": "b0t449.77",
+      "timestamp": 449.77,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 21944
+    },
+    {
+      "id": "b1t553.235",
+      "timestamp": 553.235,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 21964
+    },
+    {
+      "id": "b1t558.745",
+      "timestamp": 558.745,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 21888
+    },
+    {
+      "id": "b2t671.9449999999999",
+      "timestamp": 671.9449999999999,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 21936
+    },
+    {
+      "id": "b2t674.515",
+      "timestamp": 674.515,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 22200
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"b0t445.07000000000005\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b0t449.77\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b1t553.235\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b1t558.745\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b2t671.9449999999999\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95},{\"id\":\"b2t674.515\",\"scene\":\"talking_head\",\"speakerZone\":\"center\",\"pipCorner\":\"none\",\"confidence\":0.95}]}"
+}

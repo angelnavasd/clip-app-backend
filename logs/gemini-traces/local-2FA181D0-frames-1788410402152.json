@@ -1,0 +1,61 @@
+{
+  "videoId": "local-2FA181D0",
+  "createdAt": "2026-09-03T04:40:02.151Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 6,
+    "base64KB": 129
+  },
+  "frameMeta": [
+    {
+      "id": "b0t61.019999999999996",
+      "timestamp": 61.019999999999996,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 20780
+    },
+    {
+      "id": "b0t67.53999999999999",
+      "timestamp": 67.53999999999999,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 20696
+    },
+    {
+      "id": "b1t163.825",
+      "timestamp": 163.825,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 22048
+    },
+    {
+      "id": "b1t169.035",
+      "timestamp": 169.035,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 22252
+    },
+    {
+      "id": "b2t289.495",
+      "timestamp": 289.495,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 23200
+    },
+    {
+      "id": "b2t296.085",
+      "timestamp": 296.085,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 23440
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"b0t61.019999999999996\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20},{\"id\":\"b0t67.53999999999999\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20},{\"id\":\"b1t163.825\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20},{\"id\":\"b1t169.035\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20},{\"id\":\"b2t289.495\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20},{\"id\":\"b2t296.085\",\"scene\":\"pip\",\"speakerZone\":\"right\",\"pipCorner\":\"bottomRight\",\"confidence\":0.95,\"faceX\":85,\"faceY\":70,\"faceW\":20}]}"
+}

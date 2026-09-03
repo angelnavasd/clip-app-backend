@@ -21,6 +21,9 @@ export class StoryBeatDto {
   end: number;
   role: 'hook' | 'conflict' | 'solution' | 'punchline' | string;
   text: string;
+  needsFace?: boolean;
+  energyScore?: number;
+  sentenceIds?: string[];
 }
 
 export class ClipDecisionDto {

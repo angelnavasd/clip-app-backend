@@ -10,6 +10,10 @@ import {
 import { ClipsService } from './clips.service.js';
 import { AnalyzeTranscriptDto } from './dto/analyze-transcript.dto.js';
 import { EdlResponseDto } from './dto/edl-response.dto.js';
+import {
+  AnalyzeFramesDto,
+  FramesResponseDto,
+} from './dto/analyze-frames.dto.js';
 
 @Controller('api/v1/clips')
 export class ClipsController {
@@ -22,5 +26,14 @@ export class ClipsController {
     @Body() dto: AnalyzeTranscriptDto,
   ): Promise<EdlResponseDto> {
     return this.clipsService.analyze(dto);
+  }
+
+  @Post('analyze-frames')
+  @HttpCode(HttpStatus.OK)
+  @UsePipes(new ValidationPipe({ transform: true, whitelist: true }))
+  async analyzeFrames(
+    @Body() dto: AnalyzeFramesDto,
+  ): Promise<FramesResponseDto> {
+    return this.clipsService.analyzeFrames(dto);
   }
 }

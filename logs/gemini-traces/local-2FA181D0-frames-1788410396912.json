@@ -1,0 +1,61 @@
+{
+  "videoId": "local-2FA181D0",
+  "createdAt": "2026-09-03T04:39:56.911Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 6,
+    "base64KB": 129
+  },
+  "frameMeta": [
+    {
+      "id": "b0t444.84499999999997",
+      "timestamp": 444.84499999999997,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 21736
+    },
+    {
+      "id": "b0t450.975",
+      "timestamp": 450.975,
+      "clipId": "clip_01",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22128
+    },
+    {
+      "id": "b1t554.24",
+      "timestamp": 554.24,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 21820
+    },
+    {
+      "id": "b1t561.5999999999999",
+      "timestamp": 561.5999999999999,
+      "clipId": "clip_01",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 21920
+    },
+    {
+      "id": "b2t671.9599999999999",
+      "timestamp": 671.9599999999999,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 21944
+    },
+    {
+      "id": "b2t674.52",
+      "timestamp": 674.52,
+      "clipId": "clip_01",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 22168
+    }
+  ],
+  "rawResponse": "{\"status\":\"success\",\"frames\":[{\"id\":\"b0t444.84499999999997\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30},{\"id\":\"b0t450.975\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30},{\"id\":\"b1t554.24\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30},{\"id\":\"b1t561.5999999999999\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30},{\"id\":\"b2t671.9599999999999\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30},{\"id\":\"b2t674.52\",\"scene\":\"talking_head\",\"speakerZone\":\"left\",\"pipCorner\":\"none\",\"confidence\":0.95,\"faceX\":55,\"faceY\":45,\"faceW\":30}]}"
+}

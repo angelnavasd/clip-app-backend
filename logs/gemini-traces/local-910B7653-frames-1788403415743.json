@@ -1,0 +1,61 @@
+{
+  "videoId": "local-910B7653",
+  "createdAt": "2026-09-03T02:43:35.742Z",
+  "model": "gemini-3.7-flash",
+  "kind": "frames",
+  "stats": {
+    "frames": 6,
+    "base64KB": 134
+  },
+  "frameMeta": [
+    {
+      "id": "b0t164.02499999999998",
+      "timestamp": 164.02499999999998,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22040
+    },
+    {
+      "id": "b0t169.115",
+      "timestamp": 169.115,
+      "clipId": "clip_02",
+      "beatId": "beat_0",
+      "role": "hook",
+      "bytes": 22308
+    },
+    {
+      "id": "b1t288.8375",
+      "timestamp": 288.8375,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 23212
+    },
+    {
+      "id": "b1t294.2925",
+      "timestamp": 294.2925,
+      "clipId": "clip_02",
+      "beatId": "beat_1",
+      "role": "conflict",
+      "bytes": 23544
+    },
+    {
+      "id": "b2t745.4225",
+      "timestamp": 745.4225,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 22688
+    },
+    {
+      "id": "b2t756.3675000000001",
+      "timestamp": 756.3675000000001,
+      "clipId": "clip_02",
+      "beatId": "beat_2",
+      "role": "solution",
+      "bytes": 22952
+    }
+  ],
+  "rawResponse": "{\n  \"status\": \"success\",\n  \"frames\": [\n    {\n      \"id\": \"b0t164.02499999999998\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"b0t169.115\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"b1t288.8375\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"b1t294.2925\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"b2t745.4225\",\n      \"scene\": \"pip\",\n      \"speakerZone\": \"right\",\n      \"pipCorner\": \"bottomRight\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"b2t756.3675000000001\",\n      \"scene\": \"talking_head\",\n      \"speakerZone\": \"center\",\n      \"pipCorner\": \"none\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}
