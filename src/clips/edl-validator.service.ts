@@ -14,6 +14,7 @@ export interface ValidatorOptions {
   minGapBetweenBeats?: number;
   maxOverlapBetweenClips?: number;
   minNetDuration?: number;
+  targetClipCount?: number;
 }
 
 const DEFAULTS: Required<ValidatorOptions> = {
@@ -23,8 +24,9 @@ const DEFAULTS: Required<ValidatorOptions> = {
   minBeatDur: 2.5,
   maxBeatDur: 18,
   minGapBetweenBeats: 3,
-  maxOverlapBetweenClips: 0.3,
+  maxOverlapBetweenClips: 0.55,
   minNetDuration: 8,
+  targetClipCount: 4,
 };
 
 function normalize(s: string): string {
@@ -176,8 +178,10 @@ export class EdlValidatorService {
       let overlapped = false;
       for (const kept of diverse) {
         const keptText = (kept.storyBeats ?? []).map((b) => b.text).join(' ');
-        if (jaccard(clipText, keptText) > opts.maxOverlapBetweenClips) {
-          this.logger.warn(`[EdlValidator] Clip ${clip.id} descartado por overlap con ${kept.id}`);
+        const jaccardScore = jaccard(clipText, keptText);
+        const hookJaccard = (clip.hook && kept.hook) ? jaccard(clip.hook, kept.hook) : 0;
+        if (hookJaccard > 0.7 || jaccardScore > opts.maxOverlapBetweenClips) {
+          this.logger.warn(`[EdlValidator] Clip ${clip.id} descartado por overlap con ${kept.id} (jaccard: ${jaccardScore.toFixed(2)}, hook: ${hookJaccard.toFixed(2)})`);
           overlapped = true;
           break;
         }
@@ -185,7 +189,7 @@ export class EdlValidatorService {
       if (!overlapped) diverse.push(clip);
     }
 
-    return diverse.slice(0, 3);
+    return diverse.slice(0, opts.targetClipCount ?? 4);
   }
 
   private repairBeat(
@@ -210,8 +214,26 @@ export class EdlValidatorService {
     const covering = sentences.filter((s) => s.start < end && s.end > start);
     if (covering.length > 0) {
       start = Math.min(...covering.map((s) => s.start));
-      end = Math.max(...covering.map((s) => s.end));
-      if (capEnd !== undefined) end = Math.min(end, capEnd);
+      const lastSentence = covering[covering.length - 1];
+      const maxSentenceEnd = Math.max(...covering.map((s) => s.end));
+      const isLastBeat = capEnd === undefined;
+      let audioTailPad = 0;
+      if (isLastBeat) {
+        // Al final del clip: 0.20s - 0.35s de respiro natural para que la última palabra/sílaba no quede cortada
+        const naturalPause =
+          lastSentence.pauseAfter && lastSentence.pauseAfter > 0
+            ? lastSentence.pauseAfter
+            : 0.5;
+        audioTailPad = Math.min(0.35, Math.max(0.20, naturalPause * 0.7));
+      } else if (capEnd !== undefined) {
+        // En medio del clip: si hay un salto entre beats, dar margen seguro (80-180ms) para no cortar consonantes
+        const gapToNext = capEnd - maxSentenceEnd;
+        if (gapToNext > 0.08) {
+          audioTailPad = Math.min(0.18, Math.max(0.08, gapToNext * 0.5));
+        }
+      }
+      end = maxSentenceEnd + audioTailPad;
+      if (capEnd !== undefined) end = Math.min(end, capEnd - 0.02);
     } else {
       // Sin oración que cubra: buscar la más cercana dentro de ±2s
       const near = sentences.filter(
@@ -219,7 +241,10 @@ export class EdlValidatorService {
       );
       if (near.length === 0) return null;
       start = Math.min(...near.map((s) => s.start));
-      end = Math.max(...near.map((s) => s.end));
+      const isLastBeat = capEnd === undefined;
+      const nearMaxEnd = Math.max(...near.map((s) => s.end));
+      const audioTailPad = isLastBeat ? 0.25 : 0.08;
+      end = nearMaxEnd + audioTailPad;
       if (capEnd !== undefined && end > capEnd) return null;
     }
 

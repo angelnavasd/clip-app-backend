@@ -73,4 +73,24 @@ describe('SentenceSegmenterService (F1)', () => {
     const map = svc.buildIdMap(sentences);
     expect(map.get('S02')?.start).toBeCloseTo(2.0, 2);
   });
+
+  it('no corta a mitad de frase en la palabra 32 ni en conectores colgantes como "por ejemplo," o "se"', () => {
+    // 35 palabras continuas sin punto, terminando en la palabra 32 con "se"
+    const words = [
+      'ok', 'ahora', 'el', 'tweet', 'pero', 'esto', 'esto', 'es', 'lo', 'que',
+      'dice', 'un', 'modelo', 'sin', 'nombre', 'sin', 'logo', 'tipo', 'sin', 'empresas',
+      'y', 'sin', 'equipo', 'de', 'relaciones', 'públicas', 'simplemente', 'hizo', 'que', 'Google',
+      'se', 'se', 'viera', 'desesperado', 'final.'
+    ].map((w, i) => ({
+      word: w,
+      start: i * 0.3,
+      end: i * 0.3 + 0.28,
+      db: -18,
+    }));
+
+    const sentences = svc.segment(words);
+    // Debe mantenerse como UNA sola oración hasta el punto final, no partir en "Google se se"
+    expect(sentences.length).toBe(1);
+    expect(sentences[0].text).toContain('Google se se viera desesperado final.');
+  });
 });

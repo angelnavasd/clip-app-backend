@@ -1,0 +1,307 @@
+{
+  "videoId": "local-31805B2C",
+  "createdAt": "2026-09-04T07:14:04.119Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El misterioso modelo de IA que destronó a DeepSeek",
+      "viralScore": 96,
+      "hook": "oX no no sé si es oX o 0X creo que es oX alpha está disponible ahora en open code go por los próximos seis días todo lo que uses o sea todo el uso que lo vayas a dar va a ser ilimitado y completamente gratis total que el como sería el twitter mundo eay en inglés y español también un poco, la gente empezó a volverse loca porque todo el mundo está especulando sobre quién sería este modelo y según lo que yo entiendo ya había gente que sabía de que el laboratorio era el X -Alpha, este, por lo menos tengo par de personas que seguí, bueno esta semana precisamente",
+      "timeRange": {
+        "start": 34.7,
+        "end": 478.48
+      },
+      "cutSegments": [
+        {
+          "start": 77.84,
+          "end": 457.6,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 467.32,
+          "end": 468.24,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "ilimitado",
+          "timestamp": 46.5,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "gratis",
+          "timestamp": 48.2,
+          "color": "#00FF66",
+          "sfx": "cash_register"
+        },
+        {
+          "word": "billones",
+          "timestamp": 473,
+          "color": "#FF3366",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 34.7,
+          "end": 77.84,
+          "role": "hook",
+          "text": "oX no no sé si es oX o 0X creo que es oX alpha está disponible ahora en open code go por los próximos seis días todo lo que uses o sea todo el uso que lo vayas a dar va a ser ilimitado y completamente gratis total que el como sería el twitter mundo eay en inglés y español también un poco, la gente empezó a volverse loca porque todo el mundo está especulando sobre quién sería este modelo y según lo que yo entiendo ya había gente que sabía de que el laboratorio era el X -Alpha, este, por lo menos tengo par de personas que seguí, bueno esta semana precisamente",
+          "needsFace": true,
+          "energyScore": 71,
+          "sentenceIds": [
+            "S07",
+            "S08"
+          ]
+        },
+        {
+          "start": 457.6,
+          "end": 467.32,
+          "role": "conflict",
+          "text": "o X Alpha apareció en open router la semana pasada a no mínimo gratis no es sabía quien lo construyó dentro de en cuadro dentro del perdón dentro de 72 horas,",
+          "needsFace": false,
+          "energyScore": 70,
+          "sentenceIds": [
+            "S50"
+          ]
+        },
+        {
+          "start": 468.24,
+          "end": 478.48,
+          "role": "solution",
+          "text": "5 .7 millones visitas en la publicación del anuncio, 2 .1 billones billones de tokens procesados y 8 % de toda la diferencia de Cline,",
+          "needsFace": false,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S51"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "¿Google intentó trollear o robarse el crédito de oX Alpha?",
+      "viralScore": 94,
+      "hook": "¿Qué tal si OX Alpha son los amigos que hicimos en el camino? Entonces empezó muchas veces a creer que realmente era producto de Google.",
+      "timeRange": {
+        "start": 219.32,
+        "end": 576.24
+      },
+      "cutSegments": [
+        {
+          "start": 228.68,
+          "end": 442.26,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 455.64,
+          "end": 561.94,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "desesperado",
+          "timestamp": 454,
+          "color": "#FF0000",
+          "sfx": "impact"
+        },
+        {
+          "word": "cero",
+          "timestamp": 564,
+          "color": "#00E5FF",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 219.32,
+          "end": 228.68,
+          "role": "conflict",
+          "text": "¿Qué tal si OX Alpha son los amigos que hicimos en el camino? Entonces empezó muchas veces a creer que realmente era producto de Google.",
+          "needsFace": true,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S26",
+            "S27"
+          ]
+        },
+        {
+          "start": 442.26,
+          "end": 455.64,
+          "role": "hook",
+          "text": "ok ahora el tweet pero esto esto es lo que dice un modelo sin nombre sin logo tipo sin empréz sin equipo de relaciones públicas simplemente hizo que google se se viera desesperado bueno esto está mal traducido",
+          "needsFace": false,
+          "energyScore": 84,
+          "sentenceIds": [
+            "S48"
+          ]
+        },
+        {
+          "start": 561.94,
+          "end": 576.24,
+          "role": "solution",
+          "text": "Todo el presupuesto de marketing de OEK Alpha fue de cero dólares. Su equipo de relaciones publicar inexistentes su entidad de marca era un espacio en blanco y dominó la conversación más que cualquier cosa que Google enviar a todo el trimestre.",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S72",
+            "S73",
+            "S74"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_03",
+      "title": "La verdadera amenaza para Google en la Inteligencia Artificial",
+      "viralScore": 92,
+      "hook": "Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala.",
+      "timeRange": {
+        "start": 670.54,
+        "end": 731.18
+      },
+      "cutSegments": [
+        {
+          "start": 675.78,
+          "end": 701.98,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 713.04,
+          "end": 719.63,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "fuerte",
+          "timestamp": 674.8,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "amenaza",
+          "timestamp": 725.2,
+          "color": "#FF0000",
+          "sfx": "warning"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 670.54,
+          "end": 675.78,
+          "role": "hook",
+          "text": "Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala.",
+          "needsFace": true,
+          "energyScore": 51,
+          "sentenceIds": [
+            "S86"
+          ]
+        },
+        {
+          "start": 701.98,
+          "end": 713.04,
+          "role": "solution",
+          "text": "ok google y te realmente no puedo replicar esto, somos estructuralmente incapaces de ser anonimos, cada lanzamiento viene con publicaciones de blog, conferencia de prensas, citas de cuti, y una presentación de 40 dispositivos, bueno, en fin esto,",
+          "needsFace": false,
+          "energyScore": 50,
+          "sentenceIds": [
+            "S91",
+            "S92"
+          ]
+        },
+        {
+          "start": 719.63,
+          "end": 731.18,
+          "role": "conflict",
+          "text": "los puntos de referencia muestran que está aproximadamente a la par, ok, no es revolucionario, ok, la amenaza es como el sin nombre, con se o recurso capturó más \"Mine -Shirt\" en 3 días que \"Gemini\" en meses, bueno,",
+          "needsFace": false,
+          "energyScore": 56,
+          "sentenceIds": [
+            "S95"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "El secreto chino detrás del modelo de IA que paralizó las redes",
+      "viralScore": 90,
+      "hook": "Miles de millones en computación y la red de distribución más grande del mundo está tomando prestado el hype porque creo que acabe el hype de un modelo que literalmente no tiene marca.",
+      "timeRange": {
+        "start": 550.4,
+        "end": 792.06
+      },
+      "cutSegments": [
+        {
+          "start": 561.5,
+          "end": 683.86,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 694.06,
+          "end": 781.62,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "China",
+          "timestamp": 789.5,
+          "color": "#FF3333",
+          "sfx": "glitch"
+        },
+        {
+          "word": "internet",
+          "timestamp": 692.8,
+          "color": "#00FF66",
+          "sfx": "whoosh"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 550.4,
+          "end": 561.5,
+          "role": "solution",
+          "text": "Miles de millones en computación y la red de distribución más grande del mundo está tomando prestado el hype porque creo que acabe el hype de un modelo que literalmente no tiene marca.",
+          "needsFace": true,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S70",
+            "S71"
+          ]
+        },
+        {
+          "start": 683.86,
+          "end": 694.06,
+          "role": "conflict",
+          "text": "tipsy, pasa 6 meses sin decir absolutamente nada sin decir ningún comunicado absurta de tina y, repente, aparece como un modelo que rompa el internet y esta al cual",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S88",
+            "S89"
+          ]
+        },
+        {
+          "start": 781.62,
+          "end": 792.06,
+          "role": "hook",
+          "text": "pero que este nuevo modelo se pudo prover de esa manera gracias a que corrió 100 % en tecnología China, en un chip que era totalmente chino,",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S104"
+          ]
+        }
+      ]
+    }
+  ]
+}

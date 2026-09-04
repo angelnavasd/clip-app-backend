@@ -1,0 +1,320 @@
+{
+  "videoId": "local-6B7340B3",
+  "createdAt": "2026-09-04T07:52:37.239Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El modelo anónimo que destrozó métricas sin gastar un dólar",
+      "viralScore": 95,
+      "hook": "OX Alpha apareció en OpenRouter la semana pasada a Nónimo, Gratis, nadie sabía quién lo construyó dentro de cuadro, perdón, dentro de ese sentido horas,",
+      "timeRange": {
+        "start": 458.06,
+        "end": 570.48
+      },
+      "cutSegments": [
+        {
+          "start": 467.54,
+          "end": 467.92,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 478.66,
+          "end": 559.44,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "OX",
+          "timestamp": 458.1,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "billones",
+          "timestamp": 472.4,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "0",
+          "timestamp": 564,
+          "color": "#FFCC00",
+          "sfx": "cash_register"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 458.06,
+          "end": 467.54,
+          "role": "hook",
+          "text": "OX Alpha apareció en OpenRouter la semana pasada a Nónimo, Gratis, nadie sabía quién lo construyó dentro de cuadro, perdón, dentro de ese sentido horas,",
+          "needsFace": true,
+          "energyScore": 68,
+          "sentenceIds": [
+            "S46"
+          ]
+        },
+        {
+          "start": 467.92,
+          "end": 478.66,
+          "role": "conflict",
+          "text": "5 .7 millones de visitas en la publicación del anuncio, 2 .1 billones, billones de tokens procesados y 8 % de toda la diferencia de Cline,",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S47"
+          ]
+        },
+        {
+          "start": 559.44,
+          "end": 570.48,
+          "role": "development",
+          "text": "de un modelo que literalmente no tiene marca, todo el presupuesto de marketing de OX Alpha fue de 0 dólares su equipo de relaciones públicas en existentes, su entidad de marcar a un espacio en blanco",
+          "needsFace": false,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S67"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "El secreto de cómputo: Corría 100% en chips chinos",
+      "viralScore": 92,
+      "hook": "les conté y aparte casi me olvido, aparte el tema del cómputo, el misterio del cómputo, el misterio de por qué pudieron probarlo,",
+      "timeRange": {
+        "start": 739.36,
+        "end": 792.39
+      },
+      "cutSegments": [
+        {
+          "start": 748.16,
+          "end": 748.31,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 762.02,
+          "end": 781.62,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "misterio",
+          "timestamp": 743.7,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "chinos",
+          "timestamp": 761.1,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "china",
+          "timestamp": 789.5,
+          "color": "#FFCC00",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 739.36,
+          "end": 748.16,
+          "role": "hook",
+          "text": "les conté y aparte casi me olvido, aparte el tema del cómputo, el misterio del cómputo, el misterio de por qué pudieron probarlo,",
+          "needsFace": true,
+          "energyScore": 75,
+          "sentenceIds": [
+            "S90"
+          ]
+        },
+        {
+          "start": 748.31,
+          "end": 762.02,
+          "role": "conflict",
+          "text": "que es la novedad realmente en este modelo y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos.",
+          "needsFace": false,
+          "energyScore": 70,
+          "sentenceIds": [
+            "S91"
+          ]
+        },
+        {
+          "start": 781.62,
+          "end": 792.39,
+          "role": "solution",
+          "text": "pero que este nuevo modelo se pudo prover de esa manera gracias a que que corrió 100 % en tecnología china, en un chip que era totalmente chino.",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S95"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "Por qué Google es incapaz de competir con lanzamientos anónimos",
+      "viralScore": 91,
+      "hook": "ok Google literalmente no puedo replicar esto, somos estructuralmente incapaces de ser anónimo.",
+      "timeRange": {
+        "start": 701.98,
+        "end": 731.55
+      },
+      "cutSegments": [
+        {
+          "start": 706.2,
+          "end": 706.82,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 713.22,
+          "end": 719.61,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "Google",
+          "timestamp": 702.2,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "prensa",
+          "timestamp": 709.1,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "MineShare",
+          "timestamp": 727.6,
+          "color": "#FFCC00",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 701.98,
+          "end": 706.2,
+          "role": "hook",
+          "text": "ok Google literalmente no puedo replicar esto, somos estructuralmente incapaces de ser anónimo.",
+          "needsFace": true,
+          "energyScore": 57,
+          "sentenceIds": [
+            "S83"
+          ]
+        },
+        {
+          "start": 706.82,
+          "end": 713.22,
+          "role": "conflict",
+          "text": "lanzamiento viene con publicaciones de blog, conferencia de prensa, citas de cuti y una presentación de cuarenta y cinco centímetros, bueno, en fin esto,",
+          "needsFace": false,
+          "energyScore": 64,
+          "sentenceIds": [
+            "S84"
+          ]
+        },
+        {
+          "start": 719.61,
+          "end": 731.55,
+          "role": "solution",
+          "text": "los puntos de referencia muestran que está aproximadamente a la par, ok, no es revolucionario, ok, la amenaza es como el ocien nombre, con seores cursos capturó más \"MineShare\" en tres días que hay gemini en meses, bueno,",
+          "needsFace": false,
+          "energyScore": 56,
+          "sentenceIds": [
+            "S87",
+            "S88"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_03",
+      "title": "La lección más profunda del anonimato en la Inteligencia Artificial",
+      "viralScore": 88,
+      "hook": "bueno continuo, la lección más profunda no es sobre oekijalpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove el lanzamiento de producto AI,",
+      "timeRange": {
+        "start": 660.62,
+        "end": 701.47
+      },
+      "cutSegments": [
+        {
+          "start": 669.94,
+          "end": 670.66,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 676,
+          "end": 695.04,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "lección",
+          "timestamp": 661.7,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "fuerte",
+          "timestamp": 674.9,
+          "color": "#FFCC00",
+          "sfx": "impact"
+        },
+        {
+          "word": "misterio",
+          "timestamp": 699.4,
+          "color": "#FFCC00",
+          "sfx": "swish"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 660.62,
+          "end": 669.94,
+          "role": "hook",
+          "text": "bueno continuo, la lección más profunda no es sobre oekijalpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove el lanzamiento de producto AI,",
+          "needsFace": true,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S77"
+          ]
+        },
+        {
+          "start": 670.66,
+          "end": 676,
+          "role": "conflict",
+          "text": "cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala y es totalmente de acuerdo, por ejemplo cuando salió el Deepseek V4 Flash es lo que el memera Deepseek pasa 6 meses sin decir absolutamente nada, sin decir ningún comunicado absurta de tina y, repente,",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S78",
+            "S79"
+          ]
+        },
+        {
+          "start": 695.04,
+          "end": 701.47,
+          "role": "solution",
+          "text": "el anonimato de OX Alpha no era un error, fue toda la estrategia de distribución, conversación que era por el misterio, bueno, esto es un poco más en lo mismo,",
+          "needsFace": false,
+          "energyScore": 59,
+          "sentenceIds": [
+            "S82"
+          ]
+        }
+      ]
+    }
+  ]
+}

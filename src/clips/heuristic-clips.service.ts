@@ -22,10 +22,26 @@ export interface HeuristicInput {
   }>;
   silenceGaps?: SilenceGapDto[];
   targetDuration?: string;
+  targetClipCount?: number;
 }
 
 const ROLES = ['hook', 'conflict', 'solution', 'punchline', 'story'];
 const MIN_GAP_BETWEEN_BEATS = 3;
+
+/** Respaldo por si el cliente no marcó isFiller: muletillas ES/EN. */
+const FILLER_WORDS = new Set(
+  'eh ehhh ehh mmm mm ah ajá este o sea bueno pues tipo oye mira um uh uhm like you know well so basically actually'.split(' '),
+);
+
+function fillerRatio(text: string): number {
+  const toks = text
+    .toLowerCase()
+    .replace(/[¿?¡!.,;:()"«»\-—_]/g, '')
+    .split(/\s+/)
+    .filter(Boolean);
+  if (toks.length === 0) return 1;
+  return toks.filter((t) => FILLER_WORDS.has(t)).length / toks.length;
+}
 
 /**
  * EDL 100% determinista, $0, offline: reusa el scoring y el validador del
@@ -59,7 +75,8 @@ export class HeuristicClipsService {
 
     const candidates: ClipDecisionDto[] = [];
     const usedIds = new Set<string>();
-    for (let n = 0; n < 3; n++) {
+    const maxToTry = Math.max(4, input.targetClipCount ?? 4);
+    for (let n = 0; n < maxToTry; n++) {
       const beats = this.composeOne(scored, usedIds, target.min, target.max);
       if (beats.length < 2) break;
       beats.forEach((b) =>
@@ -90,6 +107,7 @@ export class HeuristicClipsService {
         videoDuration: input.videoDuration,
         targetMinNet: target.min,
         targetMaxNet: target.max,
+        targetClipCount: input.targetClipCount ?? 4,
       },
     );
     this.logger.log(
@@ -109,9 +127,13 @@ export class HeuristicClipsService {
       1,
       ...scored.map(({ s }) => s.end),
     );
-    // Pool: top por tercios (spread temporal), penalizando re-uso y cortas/largas
+    // Pool: top por tercios (spread temporal), penalizando re-uso y cortas/largas.
+    // Secciones de puras muletillas/silencio quedan FUERA: por flag del cliente
+    // (fillerDensity) Y por detección propia (por si el flag viene vacío).
     const pool = scored
       .filter(({ s }) => s.duration >= 2 && s.duration <= 18 && s.wordCount >= 4)
+      .filter(({ s }) => s.fillerDensity <= 0.4 && s.avgDb > -30)
+      .filter(({ s }) => fillerRatio(s.text) <= 0.4)
       .map(({ s, score }) => ({
         s,
         adj: usedIds.has(s.id) ? score - 25 : score,

@@ -1,0 +1,298 @@
+{
+  "videoId": "local-B8ABE880",
+  "createdAt": "2026-09-04T07:33:56.004Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "¿Google creó en secreto el modelo oX Alpha?",
+      "viralScore": 95,
+      "hook": "Bueno, aquí hice luego de 56 días seguido, estando tips en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido.",
+      "timeRange": {
+        "start": 161.18,
+        "end": 199.92
+      },
+      "cutSegments": [
+        {
+          "start": 171.64,
+          "end": 172.24,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 182.38,
+          "end": 183.36,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "Google",
+          "timestamp": 181.5,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "Gemini",
+          "timestamp": 198.8,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 161.18,
+          "end": 171.64,
+          "role": "hook",
+          "text": "Bueno, aquí hice luego de 56 días seguido, estando tips en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido.",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S18"
+          ]
+        },
+        {
+          "start": 172.24,
+          "end": 182.38,
+          "role": "conflict",
+          "text": "Poderás te será tanto proveedores de Computo para ese modelo, para decir dar una movida que solamente o por lo menos así se veían en ese momento que solamente Google podía hacer.",
+          "needsFace": false,
+          "energyScore": 69,
+          "sentenceIds": [
+            "S19",
+            "S20"
+          ]
+        },
+        {
+          "start": 183.36,
+          "end": 199.92,
+          "role": "solution",
+          "text": "entonces empezaron a especular, empezaron a decir un montón de cosas, pero encima de todo esto hubo varias publicaciones de gente del equipo de de la staff de DeepMind que son los que los que trabajan y los que desarrollan Gemini.",
+          "needsFace": false,
+          "energyScore": 68,
+          "sentenceIds": [
+            "S21",
+            "S22",
+            "S23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "El marketing de 0$ que aplastó a Google",
+      "viralScore": 92,
+      "hook": "Todo el presupuesto de marketing de OX Alpha fue de 0 dólares. Su equipo de relaciones públicas era inexistente, su entidad en marca era un espacio en blanco y dominó la conversación más que cualquier cosa que Google enviar a todo el trimestre.",
+      "timeRange": {
+        "start": 561.94,
+        "end": 711.98
+      },
+      "cutSegments": [
+        {
+          "start": 576.24,
+          "end": 661.58,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 675.82,
+          "end": 701.98,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "0 dólares",
+          "timestamp": 564,
+          "color": "#FFCC00",
+          "sfx": "cash_register"
+        },
+        {
+          "word": "voz más fuerte",
+          "timestamp": 674.7,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 561.94,
+          "end": 576.24,
+          "role": "hook",
+          "text": "Todo el presupuesto de marketing de OX Alpha fue de 0 dólares. Su equipo de relaciones públicas era inexistente, su entidad en marca era un espacio en blanco y dominó la conversación más que cualquier cosa que Google enviar a todo el trimestre.",
+          "needsFace": true,
+          "energyScore": 56,
+          "sentenceIds": [
+            "S65",
+            "S66",
+            "S67"
+          ]
+        },
+        {
+          "start": 661.58,
+          "end": 675.82,
+          "role": "conflict",
+          "text": "La lección más profunda no es sobre OX Alpha específicamente se trata de lo que hace la runimato en un mercado que se ha oído el lanzamiento de productos AI. Cuando cada compañía gritan \"mira nuestro modelo\", la que no dice nada se convierte en la voz más fuerte de la sala.",
+          "needsFace": false,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S81",
+            "S82"
+          ]
+        },
+        {
+          "start": 701.98,
+          "end": 711.98,
+          "role": "solution",
+          "text": "ok Google literalmente no puedo replicar esto, son estructuralmente incapaces de ser anónimo. Cada lanzamiento viene con publicaciones de blog, con farences de prensas, citas de cutiño y una presentación de cuarenta y cinco centíntesis positivas, bueno,",
+          "needsFace": false,
+          "energyScore": 52,
+          "sentenceIds": [
+            "S86",
+            "S87"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_03",
+      "title": "El secreto chino detrás de oX Alpha",
+      "viralScore": 89,
+      "hook": "aparte el tema del cómputo no el el misterio del cómputo el misterio de porque pudieron probarlo que es la novedad realmente en este modelo y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos",
+      "timeRange": {
+        "start": 741.44,
+        "end": 805.02
+      },
+      "cutSegments": [],
+      "highlightWords": [
+        {
+          "word": "chinos",
+          "timestamp": 761,
+          "color": "#FFCC00",
+          "sfx": "impact"
+        },
+        {
+          "word": "100 %",
+          "timestamp": 787,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 741.44,
+          "end": 761.82,
+          "role": "hook",
+          "text": "aparte el tema del cómputo no el el misterio del cómputo el misterio de porque pudieron probarlo que es la novedad realmente en este modelo y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos",
+          "needsFace": true,
+          "energyScore": 70,
+          "sentenceIds": [
+            "S94"
+          ]
+        },
+        {
+          "start": 761.82,
+          "end": 792.06,
+          "role": "conflict",
+          "text": "entonces esa es una novedad porque bueno saben que está toda esta guerra de envía de las previsiones de exportación a la china en fin no estoy tampoco tan enterado en el tema no les voy a mentir no estoy los de como para profundizar demasiado pero bueno sé que hay un tema pero que este nuevo modelo se pudo prover de esa manera gracias a que corrió 100 % en tecnología china en un chip que era totalmente chino",
+          "needsFace": false,
+          "energyScore": 72,
+          "sentenceIds": [
+            "S95"
+          ]
+        },
+        {
+          "start": 792.06,
+          "end": 805.02,
+          "role": "solution",
+          "text": "entonces esa es la novedad vamos a ver que se hice en estas semanas con respecto al tema y cualquier cosa bueno así que no espero que les haya gustado espero que les haya parecido cuanto menos gracioso",
+          "needsFace": false,
+          "energyScore": 70,
+          "sentenceIds": [
+            "S96"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "Por qué Gemini está decepcionando a los desarrolladores",
+      "viralScore": 87,
+      "hook": "Pero realmente Google ha avanzado muy lento este año.",
+      "timeRange": {
+        "start": 586.48,
+        "end": 627.6
+      },
+      "cutSegments": [
+        {
+          "start": 591.42,
+          "end": 602.58,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 617.12,
+          "end": 618.38,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "muy lento",
+          "timestamp": 590.7,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "nada",
+          "timestamp": 616.3,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 586.48,
+          "end": 591.42,
+          "role": "hook",
+          "text": "Pero realmente Google ha avanzado muy lento este año.",
+          "needsFace": true,
+          "energyScore": 70,
+          "sentenceIds": [
+            "S71"
+          ]
+        },
+        {
+          "start": 602.58,
+          "end": 617.12,
+          "role": "conflict",
+          "text": "entonces a muchas gente se le borró mucha cosa, que a mí me pasó también y de repente limitaron todo a un nivel que yo dije, esto ya no lo puedo usar, inclusive yo me suscribo a OpenCode porque lo que yo tenía la suscripción de Jamina y no me servía para nada, esa realidad",
+          "needsFace": false,
+          "energyScore": 75,
+          "sentenceIds": [
+            "S73",
+            "S74"
+          ]
+        },
+        {
+          "start": 618.38,
+          "end": 627.6,
+          "role": "solution",
+          "text": "no podía hacer absolutamente nada, el literal enviaba dos prompts y chau, se acabó, no me cansaba para nada y por eso fue que yo tuve yo pasé un mes utilizando codex",
+          "needsFace": false,
+          "energyScore": 62,
+          "sentenceIds": [
+            "S75",
+            "S76"
+          ]
+        }
+      ]
+    }
+  ]
+}

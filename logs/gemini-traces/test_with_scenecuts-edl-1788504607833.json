@@ -1,0 +1,289 @@
+{
+  "videoId": "test_with_scenecuts",
+  "createdAt": "2026-09-04T06:50:07.833Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El mayor error de los programadores al emprender",
+      "viralScore": 96,
+      "hook": "Hoy te voy a explicar el mayor error que cometen los programadores al crear startups.",
+      "timeRange": {
+        "start": 1,
+        "end": 135
+      },
+      "cutSegments": [
+        {
+          "start": 7.5,
+          "end": 15,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 20.6,
+          "end": 30,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 36,
+          "end": 130,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "mayor error",
+          "timestamp": 3,
+          "color": "#FF3366",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "nadie",
+          "timestamp": 19.2,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "vender",
+          "timestamp": 132,
+          "color": "#00FF66",
+          "sfx": "cash_register"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 1,
+          "end": 7.5,
+          "role": "hook",
+          "text": "Hoy te voy a explicar el mayor error que cometen los programadores al crear startups.",
+          "needsFace": true,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S01"
+          ]
+        },
+        {
+          "start": 15,
+          "end": 20.6,
+          "role": "conflict",
+          "text": "El primer problema es que construyen features que absolutamente nadie ha pedido.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S02"
+          ]
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "role": "development",
+          "text": "Pasan seis meses programando en secreto sin hablar con ningún cliente real.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S03"
+          ]
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "role": "solution",
+          "text": "En conclusión, enfócate en vender antes de escribir otra línea.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_03",
+      "title": "¿Tienes un negocio o un hobby caro?",
+      "viralScore": 95,
+      "hook": "El primer problema es que construyen features que absolutamente nadie ha pedido.",
+      "timeRange": {
+        "start": 15,
+        "end": 135
+      },
+      "cutSegments": [
+        {
+          "start": 20.6,
+          "end": 85,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 91.5,
+          "end": 105,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 111.7,
+          "end": 130,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "hobby caro",
+          "timestamp": 110.4,
+          "color": "#FF3300",
+          "sfx": "gasp"
+        },
+        {
+          "word": "regla de oro",
+          "timestamp": 85.9,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        },
+        {
+          "word": "lanzar rápido",
+          "timestamp": 87.4,
+          "color": "#00E5FF",
+          "sfx": "whoosh"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 15,
+          "end": 20.6,
+          "role": "context",
+          "text": "El primer problema es que construyen features que absolutamente nadie ha pedido.",
+          "needsFace": true,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S02"
+          ]
+        },
+        {
+          "start": 85,
+          "end": 91.5,
+          "role": "solution",
+          "text": "La tercera regla de oro es lanzar rápido y cobrar desde el día número uno.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S06"
+          ]
+        },
+        {
+          "start": 105,
+          "end": 111.7,
+          "role": "hook",
+          "text": "Si la gente no paga por tu código, no tienes un negocio, tienes un hobby caro.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S07"
+          ]
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "role": "conclusion",
+          "text": "En conclusión, enfócate en vender antes de escribir otra línea.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "La trampa mortal del servidor y la infraestructura",
+      "viralScore": 92,
+      "hook": "La segunda trampa mortal es la optimización prematura de servidores.",
+      "timeRange": {
+        "start": 50,
+        "end": 135
+      },
+      "cutSegments": [
+        {
+          "start": 55.1,
+          "end": 65,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 70.9,
+          "end": 105,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 111.7,
+          "end": 130,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "trampa mortal",
+          "timestamp": 50.8,
+          "color": "#FF0000",
+          "sfx": "impact"
+        },
+        {
+          "word": "miles de dólares",
+          "timestamp": 65.5,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "hobby caro",
+          "timestamp": 110.4,
+          "color": "#FF9900",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 50,
+          "end": 55.1,
+          "role": "hook",
+          "text": "La segunda trampa mortal es la optimización prematura de servidores.",
+          "needsFace": true,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S04"
+          ]
+        },
+        {
+          "start": 65,
+          "end": 70.9,
+          "role": "conflict",
+          "text": "Gastan miles de dólares en infraestructura para un tráfico que todavía no existe.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S05"
+          ]
+        },
+        {
+          "start": 105,
+          "end": 111.7,
+          "role": "climax",
+          "text": "Si la gente no paga por tu código, no tienes un negocio, tienes un hobby caro.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S07"
+          ]
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "role": "solution",
+          "text": "En conclusión, enfócate en vender antes de escribir otra línea.",
+          "needsFace": false,
+          "energyScore": 91,
+          "sentenceIds": [
+            "S08"
+          ]
+        }
+      ]
+    }
+  ]
+}

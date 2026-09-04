@@ -1,0 +1,9 @@
+{
+  "videoId": "test_video",
+  "createdAt": "2026-09-04T04:10:10.336Z",
+  "target": {
+    "min": 20,
+    "max": 60
+  },
+  "clips": []
+}

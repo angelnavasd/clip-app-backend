@@ -1,0 +1,60 @@
+{
+  "videoId": "test_video",
+  "createdAt": "2026-09-04T04:10:10.331Z",
+  "model": "gemini-3.6-flash",
+  "stats": {
+    "words": 18,
+    "sentences": 2,
+    "videoDuration": 60,
+    "targetDuration": "Auto (20-40s)",
+    "genre": "general"
+  },
+  "sentences": [
+    {
+      "id": "S01",
+      "index": 0,
+      "text": "Hola a todos",
+      "start": 0,
+      "end": 1.2,
+      "duration": 1.2,
+      "wordCount": 3,
+      "wordStartIndex": 0,
+      "wordEndIndex": 2,
+      "avgDb": -20,
+      "maxDb": -20,
+      "wpm": 150,
+      "fillerDensity": 0,
+      "pauseAfter": 0.8,
+      "endsWithPause": true,
+      "isQuestion": false,
+      "hasNumber": true,
+      "hasNegation": false,
+      "hasContrast": false,
+      "hasSuperlative": false
+    },
+    {
+      "id": "S02",
+      "index": 1,
+      "text": "hoy vamos a aprender cómo hacer clips virales en segundos con inteligencia artificial es increíble",
+      "start": 2,
+      "end": 8,
+      "duration": 6,
+      "wordCount": 15,
+      "wordStartIndex": 3,
+      "wordEndIndex": 17,
+      "avgDb": -20,
+      "maxDb": -20,
+      "wpm": 150,
+      "fillerDensity": 0,
+      "pauseAfter": 0,
+      "endsWithPause": false,
+      "isQuestion": false,
+      "hasNumber": true,
+      "hasNegation": false,
+      "hasContrast": false,
+      "hasSuperlative": true
+    }
+  ],
+  "userPrompt": "\nAnaliza esta transcripción y crea de 1 a 3 clips virales maestros con multi-cortes (jump cuts entre secciones separadas del video).\n\nDATOS DEL VIDEO:\n- Video ID: test_video\n- Idioma: auto\n- Género/vertical: general\n- Duración objetivo pedida por el usuario: Auto (20-40s) (respétala; por defecto 20-40s netos por clip)\n- Duración total del video: 60 segundos\n- Rango de timestamps de las palabras: 0s a 8s\n- Total de palabras transcritas: 18\n- Total de oraciones segmentadas: 2\n- Silencios detectados (vDSP, para saltar): ninguno reportado\n\nCÓMO ELEGIR (rúbrica):\n- Prioriza oraciones con maxDb alto (énfasis vocal), PREGUNTA, CON_NUMERO, NEGACION, CONTRASTE o ENFASIS.\n- Penaliza MUCHAS_MULETILLAS y wpm anormal (<90 o >220).\n- El hook (primer beat) debe ser autocontenido y con curiosity gap en <3s de lectura.\n- Cada beat = 1+ oraciones completas (usa sus IDs). NUNCA cortes a mitad de oración.\n\nPASS 1 — CANDIDATOS PRE-SELECCIONADOS POR AUDIO+TEXTO (repartidos por inicio/medio/fin del video para forzar multi-corte; úsalos como guía, puedes variar 1-2):\nS01(score:62), S02(score:84)\n\nRECORDATORIO: Cada clip debe tener entre 20 y 60 segundos NETOS (suma de sus beats, o lo que pida la duración objetivo). Cada beat individual debe durar entre 4 y 18 segundos y contener una ORACIÓN COMPLETA con sentido. Los beats deben venir de momentos separados del video (>15s entre ellos), saltando rodeos y silencios.\n\nORACIONES (fuente de verdad para timestamps — usa estos start/end exactos):\nS01 [0.0-1.2s, 1.2s, avgDb:-20, maxDb:-20, wpm:150, CON_NUMERO, PAUSA_DESPUES]: Hola a todos\nS02 [2.0-8.0s, 6.0s, avgDb:-20, maxDb:-20, wpm:150, CON_NUMERO, ENFASIS]: hoy vamos a aprender cómo hacer clips virales en segundos con inteligencia artificial es increíble\n\nTRANSCRIPCIÓN PALABRA POR PALABRA (formato: {w: palabra, s: inicio, e: fin, d: dB opcional, f:1 si muletilla}):\n[{\"w\":\"Hola\",\"s\":0,\"e\":0.5},{\"w\":\"a\",\"s\":0.5,\"e\":0.8},{\"w\":\"todos\",\"s\":0.8,\"e\":1.2},{\"w\":\"hoy\",\"s\":2,\"e\":2.4},{\"w\":\"vamos\",\"s\":2.4,\"e\":2.8},{\"w\":\"a\",\"s\":2.8,\"e\":3},{\"w\":\"aprender\",\"s\":3,\"e\":3.5},{\"w\":\"cómo\",\"s\":3.5,\"e\":3.8},{\"w\":\"hacer\",\"s\":3.8,\"e\":4.1},{\"w\":\"clips\",\"s\":4.1,\"e\":4.5},{\"w\":\"virales\",\"s\":4.5,\"e\":5},{\"w\":\"en\",\"s\":5,\"e\":5.2},{\"w\":\"segundos\",\"s\":5.2,\"e\":5.8},{\"w\":\"con\",\"s\":5.8,\"e\":6},{\"w\":\"inteligencia\",\"s\":6,\"e\":6.6},{\"w\":\"artificial\",\"s\":6.6,\"e\":7.2},{\"w\":\"es\",\"s\":7.2,\"e\":7.5},{\"w\":\"increíble\",\"s\":7.5,\"e\":8}]\n",
+  "rawResponse": "{\n  \"status\": \"success\",\n  \"clips\": [\n    {\n      \"id\": \"clip_01\",\n      \"title\": \"Cómo hacer clips virales con inteligencia artificial\",\n      \"viralScore\": 85,\n      \"hook\": \"hoy vamos a aprender cómo hacer clips virales en segundos con inteligencia artificial es increíble\",\n      \"timeRange\": {\n        \"start\": 2.0,\n        \"end\": 8.0\n      },\n      \"storyBeats\": [\n        {\n          \"start\": 2.0,\n          \"end\": 8.0,\n          \"role\": \"hook\",\n          \"text\": \"hoy vamos a aprender cómo hacer clips virales en segundos con inteligencia artificial es increíble\"\n        }\n      ],\n      \"cutSegments\": [],\n      \"highlightWords\": [\n        {\n          \"word\": \"virales\",\n          \"timestamp\": 4.5,\n          \"color\": \"#FFCC00\",\n          \"sfx\": \"whoosh\"\n        },\n        {\n          \"word\": \"inteligencia\",\n          \"timestamp\": 6.0,\n          \"color\": \"#FFCC00\",\n          \"sfx\": \"pop\"\n        }\n      ]\n    }\n  ]\n}"
+}

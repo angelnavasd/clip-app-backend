@@ -64,4 +64,12 @@ export class AnalyzeTranscriptDto {
   @IsString()
   @IsOptional()
   genre?: string;
+
+  @IsNumber()
+  @IsOptional()
+  targetClipCount?: number;
+
+  @IsArray()
+  @IsOptional()
+  sceneCuts?: number[];
 }

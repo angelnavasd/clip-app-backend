@@ -1,0 +1,348 @@
+{
+  "videoId": "local-B2CB54F9",
+  "createdAt": "2026-09-04T19:47:02.028Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_03",
+      "title": "Lo que se necesita para gobernar Venezuela",
+      "viralScore": 98,
+      "hook": "Para ser presidente venezuela necesitas tener algo que María Corina ha demostrado. Los últimos 8 meses que ella simplemente no tiene.",
+      "timeRange": {
+        "start": 1859.1,
+        "end": 2020.74
+      },
+      "cutSegments": [
+        {
+          "start": 1864.6,
+          "end": 1871.04,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 1881.04,
+          "end": 1901.84,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 1906.54,
+          "end": 2013.2,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "demostrado",
+          "timestamp": 1861.8,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "Guaramos",
+          "timestamp": 1871.5,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        },
+        {
+          "word": "control",
+          "timestamp": 1902.4,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 1859.1,
+          "end": 1864.6,
+          "role": "hook",
+          "text": "Para ser presidente venezuela necesitas tener algo que María Corina ha demostrado. Los últimos 8 meses que ella simplemente no tiene.",
+          "needsFace": true,
+          "energyScore": 63,
+          "sentenceIds": [
+            "S402",
+            "S403",
+            "S404"
+          ]
+        },
+        {
+          "start": 1871.04,
+          "end": 1881.04,
+          "role": "conflict",
+          "text": "Necesitas tener Guaramos, para ser presidente venezuela. La cosa que yo voy a ser presidente venezuela pero no voy a comportar como si estuve ese buscando un cargo político en suiza, no funciona.",
+          "needsFace": false,
+          "energyScore": 60,
+          "sentenceIds": [
+            "S407",
+            "S408",
+            "S409",
+            "S410"
+          ]
+        },
+        {
+          "start": 1901.84,
+          "end": 1906.54,
+          "role": "development",
+          "text": "¿Quieres mantener control del país en Venezuela? Necesitas tener lo guaramos bien puestos.",
+          "needsFace": false,
+          "energyScore": 57,
+          "sentenceIds": [
+            "S417",
+            "S418"
+          ]
+        },
+        {
+          "start": 2013.2,
+          "end": 2020.74,
+          "role": "solution",
+          "text": "La diferencia es que yo no me estoy vendiendo como líder de Venezuela. Yo no estoy hablando como que yo fuese a la persona que tiene que estar en el poder para que toda la inversión está en el poder. ¿Qué se hace?",
+          "needsFace": false,
+          "energyScore": 72,
+          "sentenceIds": [
+            "S453",
+            "S454",
+            "S455"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "La única opción para Venezuela",
+      "viralScore": 96,
+      "hook": "Está repleto de problemas potenciales, pero al mismo tiempo, hoy por hoy, no es que sea la mejor de las opciones, es la única que hay, es la única que hay.",
+      "timeRange": {
+        "start": 705.78,
+        "end": 776.93
+      },
+      "cutSegments": [
+        {
+          "start": 714.52,
+          "end": 715.08,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 723.16,
+          "end": 764.94,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "única",
+          "timestamp": 712,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "millones",
+          "timestamp": 719.5,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        },
+        {
+          "word": "alternativa",
+          "timestamp": 766,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 705.78,
+          "end": 714.52,
+          "role": "hook",
+          "text": "Está repleto de problemas potenciales, pero al mismo tiempo, hoy por hoy, no es que sea la mejor de las opciones, es la única que hay, es la única que hay.",
+          "needsFace": true,
+          "energyScore": 63,
+          "sentenceIds": [
+            "S137",
+            "S138"
+          ]
+        },
+        {
+          "start": 715.08,
+          "end": 723.16,
+          "role": "conflict",
+          "text": "Nadie más tiene la respuesta a de dónde van a venir, las docenas de miles de millones de dólares que requiere Venezuela en el corto plazo.",
+          "needsFace": false,
+          "energyScore": 53,
+          "sentenceIds": [
+            "S139",
+            "S140",
+            "S141"
+          ]
+        },
+        {
+          "start": 764.94,
+          "end": 776.93,
+          "role": "solution",
+          "text": "tú no me estás dando ninguna alternativa más de lo que está presentando a Trump entonces está muy bien decir que bueno no te parece perfecto te parece que es preocupante, te parece que esto se debería haber dicho en las condiciones de democracia en el país, ok?",
+          "needsFace": false,
+          "energyScore": 60,
+          "sentenceIds": [
+            "S152"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_01",
+      "title": "La improvisación de los políticos venezolanos",
+      "viralScore": 95,
+      "hook": "todo siempre se hace de la forma más cútera, más cútera y más chavacana posible, todo siempre está hecho la peor forma posible porque a nadie le importa lo que están haciendo,",
+      "timeRange": {
+        "start": 211.92,
+        "end": 249.95
+      },
+      "cutSegments": [
+        {
+          "start": 221.68,
+          "end": 231.6,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 241.82,
+          "end": 242.42,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "chavacana",
+          "timestamp": 215.5,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "audio",
+          "timestamp": 238.2,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "gobernar",
+          "timestamp": 249.2,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 211.92,
+          "end": 221.68,
+          "role": "hook",
+          "text": "todo siempre se hace de la forma más cútera, más cútera y más chavacana posible, todo siempre está hecho la peor forma posible porque a nadie le importa lo que están haciendo,",
+          "needsFace": true,
+          "energyScore": 81,
+          "sentenceIds": [
+            "S41",
+            "S42"
+          ]
+        },
+        {
+          "start": 231.6,
+          "end": 241.82,
+          "role": "conflict",
+          "text": "Y es una falta de seriedad y me hace pensar si así tú tratas tus comunicaciones en algo tan simple como tener una buena calidad de audio para un video importante que solamente dura siete minutos.",
+          "needsFace": false,
+          "energyScore": 61,
+          "sentenceIds": [
+            "S45",
+            "S46"
+          ]
+        },
+        {
+          "start": 242.42,
+          "end": 249.95,
+          "role": "solution",
+          "text": "Entonces como tratarás todas las demás cosas que realmente si van a tener algún impacto serio sobre, por ejemplo, un país que tú pretendas gobernar.",
+          "needsFace": false,
+          "energyScore": 61,
+          "sentenceIds": [
+            "S47"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "La realidad de los inversionistas extranjeros",
+      "viralScore": 92,
+      "hook": "Tú piensa que a eso las compañías transferas son pendejas y no saben que esto puede pasar una vez más en Venezuela.",
+      "timeRange": {
+        "start": 1534.29,
+        "end": 2335.51
+      },
+      "cutSegments": [
+        {
+          "start": 1538.8,
+          "end": 1587.7,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 1596.42,
+          "end": 2328.82,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "compañías",
+          "timestamp": 1535.1,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "interés",
+          "timestamp": 1591.3,
+          "color": "#FFCC00",
+          "sfx": "bell"
+        },
+        {
+          "word": "recuperación",
+          "timestamp": 2330,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 1534.29,
+          "end": 1538.8,
+          "role": "hook",
+          "text": "Tú piensa que a eso las compañías transferas son pendejas y no saben que esto puede pasar una vez más en Venezuela.",
+          "needsFace": true,
+          "energyScore": 59,
+          "sentenceIds": [
+            "S313"
+          ]
+        },
+        {
+          "start": 1587.7,
+          "end": 1596.42,
+          "role": "conflict",
+          "text": "que a estas alturas, 8 meses después del 3 de enero, el interés de parte de compañías trángelas de invertir esa cantidad de plata en Venezuela ha sido muy bajo.",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S327"
+          ]
+        },
+        {
+          "start": 2328.82,
+          "end": 2335.51,
+          "role": "solution",
+          "text": "Venezuela va a tener una recuperación económica al cuarto plazo o vamos a estar aquí a 30 años mamando locos.",
+          "needsFace": false,
+          "energyScore": 59,
+          "sentenceIds": [
+            "S532",
+            "S533"
+          ]
+        }
+      ]
+    }
+  ]
+}

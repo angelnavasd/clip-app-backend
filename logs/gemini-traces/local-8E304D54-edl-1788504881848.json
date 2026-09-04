@@ -1,0 +1,299 @@
+{
+  "videoId": "local-8E304D54",
+  "createdAt": "2026-09-04T06:54:41.848Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_03",
+      "title": "La lección de marketing de cero dólares",
+      "viralScore": 98,
+      "hook": "Miles de millones en computación y la red de distribución más grande del mundo está tomando prestado el hype porque creo que acá el hype de un modelo que literalmente no tiene",
+      "timeRange": {
+        "start": 550.42,
+        "end": 678.02
+      },
+      "cutSegments": [
+        {
+          "start": 561.1,
+          "end": 670.54,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "cero",
+          "timestamp": 564,
+          "color": "#00FF66",
+          "sfx": "cash"
+        },
+        {
+          "word": "fuerte",
+          "timestamp": 674.8,
+          "color": "#FFCC00",
+          "sfx": "subtle_boom"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 550.42,
+          "end": 561.1,
+          "role": "hook",
+          "text": "Miles de millones en computación y la red de distribución más grande del mundo está tomando prestado el hype porque creo que acá el hype de un modelo que literalmente no tiene",
+          "needsFace": true,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S91"
+          ]
+        },
+        {
+          "start": 670.54,
+          "end": 678.02,
+          "role": "takeaway",
+          "text": "Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la voz más fuerte de la sala y es totalmente de acuerdo, por ejemplo,",
+          "needsFace": false,
+          "energyScore": 59,
+          "sentenceIds": [
+            "S110",
+            "S111"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_01",
+      "title": "El misterioso modelo oX Alpha destrona a DeepSeek",
+      "viralScore": 96,
+      "hook": "Entonces la gente empezó a divinar empezaron a decir un montón de cosas empezaron a hacer sus investigaciones y obviamente lo que más llamó la atención en ese momento fue que era completamente gratis y todas estas plataformas a parte de OpenCode porque también estuvo en OpenRouter, también estuvo en line,",
+      "timeRange": {
+        "start": 87.86,
+        "end": 182.38
+      },
+      "cutSegments": [
+        {
+          "start": 105.28,
+          "end": 161.18,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 171.64,
+          "end": 172.24,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "gratis",
+          "timestamp": 98.1,
+          "color": "#00FF66",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 87.86,
+          "end": 105.28,
+          "role": "conflict",
+          "text": "Entonces la gente empezó a divinar empezaron a decir un montón de cosas empezaron a hacer sus investigaciones y obviamente lo que más llamó la atención en ese momento fue que era completamente gratis y todas estas plataformas a parte de OpenCode porque también estuvo en OpenRouter, también estuvo en line,",
+          "needsFace": true,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S13",
+            "S14"
+          ]
+        },
+        {
+          "start": 161.18,
+          "end": 171.64,
+          "role": "hook",
+          "text": "Bueno, aquí hice luego de 56 días seguido, estando tips en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido.",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S22"
+          ]
+        },
+        {
+          "start": 172.24,
+          "end": 182.38,
+          "role": "climax",
+          "text": "Poderás te será tanto proveedores de Computo para ese modelo, para decir dar una movida que solamente o por lo menos así se veían en ese momento que solamente Google podía hacer.",
+          "needsFace": false,
+          "energyScore": 69,
+          "sentenceIds": [
+            "S23",
+            "S24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "¿Google estuvo detrás del trolleo de oX Alpha?",
+      "viralScore": 94,
+      "hook": "Por ejemplo aquí tenemos esto es de ok la publicación en Open Code es de el 21 agosto, del 22 de agosto tenemos tres publicaciones del staff de DeepMind Google Is Back, confía en el proceso, ¿qué tal si o Xalfa son los amigos que hicimos en el camino?",
+      "timeRange": {
+        "start": 205.94,
+        "end": 453.72
+      },
+      "cutSegments": [
+        {
+          "start": 223.94,
+          "end": 290.26,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 299.38,
+          "end": 442.26,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "desesperado",
+          "timestamp": 454,
+          "color": "#FF3366",
+          "sfx": "impact"
+        },
+        {
+          "word": "contribución",
+          "timestamp": 291.2,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 205.94,
+          "end": 223.94,
+          "role": "conflict",
+          "text": "Por ejemplo aquí tenemos esto es de ok la publicación en Open Code es de el 21 agosto, del 22 de agosto tenemos tres publicaciones del staff de DeepMind Google Is Back, confía en el proceso, ¿qué tal si o Xalfa son los amigos que hicimos en el camino?",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S30",
+            "S31"
+          ]
+        },
+        {
+          "start": 290.26,
+          "end": 299.38,
+          "role": "resolution",
+          "text": "Así que bueno, la única contribución de Google en todo este asunto real es el nombre Flash porque de la diga delante no tenía absolutamente nada que ver.",
+          "needsFace": false,
+          "energyScore": 73,
+          "sentenceIds": [
+            "S41"
+          ]
+        },
+        {
+          "start": 442.26,
+          "end": 453.72,
+          "role": "hook",
+          "text": "ok ahora el tweet pero esto esto es lo que dice un modelo sin nombre sin logo tipo sin empresas y sin equipo de relaciones públicas simplemente hizo que Google se se",
+          "needsFace": false,
+          "energyScore": 84,
+          "sentenceIds": [
+            "S64"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "El verdadero secreto: chips 100% chinos",
+      "viralScore": 92,
+      "hook": "Bueno, continuo, la lección más profunda no es sobre OX Alpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove lanzamientos de productos AI.",
+      "timeRange": {
+        "start": 660.62,
+        "end": 792.04
+      },
+      "cutSegments": [
+        {
+          "start": 669.76,
+          "end": 684.02,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 694.06,
+          "end": 751.36,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 761.68,
+          "end": 786.72,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "chinos,",
+          "timestamp": 761,
+          "color": "#FF3366",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "100",
+          "timestamp": 787,
+          "color": "#00FF66",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 660.62,
+          "end": 669.76,
+          "role": "hook",
+          "text": "Bueno, continuo, la lección más profunda no es sobre OX Alpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove lanzamientos de productos AI.",
+          "needsFace": true,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S109"
+          ]
+        },
+        {
+          "start": 684.02,
+          "end": 694.06,
+          "role": "example",
+          "text": "tipsy, pasa 6 meses sin decir absolutamente nada, sin decir ningún comunicado absurta de tina y, repente, aparece como un modelo que rompa el internet y esta al cual",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S113",
+            "S114"
+          ]
+        },
+        {
+          "start": 751.36,
+          "end": 761.68,
+          "role": "revelation",
+          "text": "es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos,",
+          "needsFace": false,
+          "energyScore": 71,
+          "sentenceIds": [
+            "S122"
+          ]
+        },
+        {
+          "start": 786.72,
+          "end": 792.04,
+          "role": "conclusion",
+          "text": "corrió 100 % en tecnología China, en un chip que era totalmente chino,",
+          "needsFace": false,
+          "energyScore": 50,
+          "sentenceIds": [
+            "S127"
+          ]
+        }
+      ]
+    }
+  ]
+}

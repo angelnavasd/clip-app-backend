@@ -1,0 +1,311 @@
+{
+  "videoId": "local-B1941178",
+  "createdAt": "2026-09-04T06:30:32.920Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El misterioso modelo que destronó a DeepSeek",
+      "viralScore": 95,
+      "hook": "Bueno, aquí se luego de 56 días seguido estando DeepSeek en el puesto número 1, lo destronó el X -Alpha con 2 .6 trillones de tokens consumido.",
+      "timeRange": {
+        "start": 161.18,
+        "end": 576.24
+      },
+      "cutSegments": [
+        {
+          "start": 171.66,
+          "end": 458.24,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 467.32,
+          "end": 569.24,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "trillones",
+          "timestamp": 168.4,
+          "color": "#FF3366",
+          "sfx": "impact"
+        },
+        {
+          "word": "dominó",
+          "timestamp": 571,
+          "color": "#00FFCC",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 161.18,
+          "end": 171.66,
+          "role": "hook",
+          "text": "Bueno, aquí se luego de 56 días seguido estando DeepSeek en el puesto número 1, lo destronó el X -Alpha con 2 .6 trillones de tokens consumido.",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S23"
+          ]
+        },
+        {
+          "start": 458.24,
+          "end": 467.32,
+          "role": "conflict",
+          "text": "OX Alpha apareció en OpenRouter la semana pasada a Nónimo, Gratid, nadie sabía quién lo construyó dentro de cuadro, dentro de 72 horas,",
+          "needsFace": false,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S70"
+          ]
+        },
+        {
+          "start": 569.24,
+          "end": 576.24,
+          "role": "solution",
+          "text": "un espacio en blanco y dominó la conversación más que cualquier cosa que Google enviar a todo el trimestre.",
+          "needsFace": false,
+          "energyScore": 55,
+          "sentenceIds": [
+            "S93",
+            "S94"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "¿Google pretendía que OX Alpha era de ellos?",
+      "viralScore": 92,
+      "hook": "¿Qué tal si OX Alpha son los amigos que hicimos en el camino? Entonces empezó muchas veces a creer que realmente era producto de Google.",
+      "timeRange": {
+        "start": 219.36,
+        "end": 332.54
+      },
+      "cutSegments": [
+        {
+          "start": 228.68,
+          "end": 286.22,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 296.84,
+          "end": 325.42,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "Google",
+          "timestamp": 228.4,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "Flash",
+          "timestamp": 288.3,
+          "color": "#FF3366",
+          "sfx": "ding"
+        },
+        {
+          "word": "nunca",
+          "timestamp": 326.9,
+          "color": "#FF0000",
+          "sfx": "impact"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 219.36,
+          "end": 228.68,
+          "role": "hook",
+          "text": "¿Qué tal si OX Alpha son los amigos que hicimos en el camino? Entonces empezó muchas veces a creer que realmente era producto de Google.",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S33",
+            "S34"
+          ]
+        },
+        {
+          "start": 286.22,
+          "end": 296.84,
+          "role": "conflict",
+          "text": "el modelo era GLM 5 .3 Flash, no lo he utilizado, así que bueno, la única contribución de Google en todo este asunto real es el nombre Flash, porque de ahí está",
+          "needsFace": false,
+          "energyScore": 74,
+          "sentenceIds": [
+            "S44"
+          ]
+        },
+        {
+          "start": 325.42,
+          "end": 332.54,
+          "role": "solution",
+          "text": "no no, no era un modelo de Google, el Google nunca tuvo nada que ver, incluso luego, luego de que ya pasó todo esto, porque realidad se supo que el modelo era",
+          "needsFace": false,
+          "energyScore": 76,
+          "sentenceIds": [
+            "S49"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_03",
+      "title": "El poder del anonimato en la IA",
+      "viralScore": 89,
+      "hook": "bueno continuo, la lección más profunda no es sobre oekijalpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove el lanzamiento de productos AI. Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la más fuerte de la sala.",
+      "timeRange": {
+        "start": 660.62,
+        "end": 731.18
+      },
+      "cutSegments": [
+        {
+          "start": 675.82,
+          "end": 695.04,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 701.12,
+          "end": 722.94,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "fuerte",
+          "timestamp": 674.8,
+          "color": "#FFCC00",
+          "sfx": "impact"
+        },
+        {
+          "word": "estrategia",
+          "timestamp": 697.6,
+          "color": "#00FFCC",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "amenaza",
+          "timestamp": 725.2,
+          "color": "#FF3366",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 660.62,
+          "end": 675.82,
+          "role": "hook",
+          "text": "bueno continuo, la lección más profunda no es sobre oekijalpha específicamente se trata de lo que hace el aronimato en un mercado que se ha ove el lanzamiento de productos AI. Cuando cada compañía grita mira nuestro modelo la que no dice nada se convierte en la más fuerte de la sala.",
+          "needsFace": true,
+          "energyScore": 67,
+          "sentenceIds": [
+            "S105",
+            "S106"
+          ]
+        },
+        {
+          "start": 695.04,
+          "end": 701.12,
+          "role": "conflict",
+          "text": "el anunimato de OX Alpha no era un error, fue toda la estrategia de distribución, conversación que era por el misterio, bueno, esto es un poco más en lo mismo.",
+          "needsFace": false,
+          "energyScore": 59,
+          "sentenceIds": [
+            "S110"
+          ]
+        },
+        {
+          "start": 722.94,
+          "end": 731.18,
+          "role": "solution",
+          "text": "ok, no es revolucionario, la amenaza es como un modelo sin nombre, con un recurso capturón más \"Mine -Shirt\" en 3 días que \"Gemini\" en meses, bueno,",
+          "needsFace": false,
+          "energyScore": 53,
+          "sentenceIds": [
+            "S115"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_04",
+      "title": "El secreto detrás de los chips chinos de OX Alpha",
+      "viralScore": 88,
+      "hook": "y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos",
+      "timeRange": {
+        "start": 751.22,
+        "end": 792.04
+      },
+      "cutSegments": [],
+      "highlightWords": [
+        {
+          "word": "chinos",
+          "timestamp": 761,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "guerra",
+          "timestamp": 766.4,
+          "color": "#FF0000",
+          "sfx": "impact"
+        },
+        {
+          "word": "100",
+          "timestamp": 787.1,
+          "color": "#00FFCC",
+          "sfx": "ding"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 751.22,
+          "end": 761.7,
+          "role": "hook",
+          "text": "y es que cuando lo anunciaron oficialmente se dijo que este modelo corría completamente en chips que eran chinos",
+          "needsFace": true,
+          "energyScore": 71,
+          "sentenceIds": [
+            "S119"
+          ]
+        },
+        {
+          "start": 761.74,
+          "end": 774.66,
+          "role": "conflict",
+          "text": "entonces esa es una novedades porque bueno saben que está toda esta guerra envidia de las previsiones de exportaciones china e en fin nos estoy tampoco tan enterado en el tema no",
+          "needsFace": false,
+          "energyScore": 72,
+          "sentenceIds": [
+            "S120"
+          ]
+        },
+        {
+          "start": 774.66,
+          "end": 792.04,
+          "role": "solution",
+          "text": "les voy a mentir no estoy nos estoy como para profundizar demasiado pero bueno sé que hay todo un tema pero que este nuevo modelo se pudo prover de esa manera gracias a que corrió 100 % en tecnología china, en un chip que era totalmente chino.",
+          "needsFace": false,
+          "energyScore": 69,
+          "sentenceIds": [
+            "S121",
+            "S122"
+          ]
+        }
+      ]
+    }
+  ]
+}

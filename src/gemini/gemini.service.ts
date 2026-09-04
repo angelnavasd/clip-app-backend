@@ -5,14 +5,6 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { AnalyzeTranscriptDto } from '../clips/dto/analyze-transcript.dto.js';
 import { EdlResponseDto } from '../clips/dto/edl-response.dto.js';
-import {
-  AnalyzeFramesDto,
-  FRAME_SCENES,
-  PIP_CORNERS,
-  FrameAnalysisDto,
-  FramesResponseDto,
-  SPEAKER_ZONES,
-} from '../clips/dto/analyze-frames.dto.js';
 import { SentenceSegmenterService } from '../clips/sentence-segmenter.service.js';
 import { EdlValidatorService } from '../clips/edl-validator.service.js';
 
@@ -56,11 +48,14 @@ export class GeminiService {
       };
     }
 
+    const targetClipCount = Math.max(1, Math.min(8, data.targetClipCount || 4));
+
     const systemInstruction = `
 Eres un editor de video profesional que crea clips virales para TikTok/Reels/Shorts a partir de transcripciones con timestamps.
 
 # TU TAREA
-Recibirás una transcripción de un video con timestamps por palabra. Debes crear de 1 a 3 clips maestros (idealmente 2 si la duración del contenido lo permite, o al menos 1). Cada clip se construye COSIENDO fragmentos (storyBeats) de DISTINTAS PARTES del video para formar un resumen narrativo coherente y magnético.
+Recibirás una transcripción de un video con timestamps por palabra. Debes crear hasta ${targetClipCount} clips maestros (idealmente ${targetClipCount} opciones si la duración y variedad del contenido lo permite, o al menos 3). Cada clip se construye COSIENDO fragmentos (storyBeats) de DISTINTAS PARTES del video para formar un resumen narrativo coherente y magnético.
+Cada clip debe enfocarse en un ángulo, idea o momento clave DIFERENTE del video, permitiendo al usuario elegir entre varias opciones narrativas interesantes.
 
 # REGLAS CRÍTICAS DE DURACIÓN Y ESTRUCTURA
 
@@ -73,12 +68,22 @@ Recibirás una transcripción de un video con timestamps por palabra. Debes crea
 - Un beat DEBE contener una ORACIÓN COMPLETA con sujeto, verbo y predicado. NUNCA cortes a mitad de una frase o palabra.
 - Para definir el inicio ('start') y fin ('end') de cada beat, toma el timestamp exacto de la primera y última palabra de la oración completa.
 
-## Separación entre beats (MULTI-CORTE REAL)
-- Los beats de un clip deben provenir de diferentes momentos del discurso, eliminando rellenos, rodeos y pausas intermedias.
-- El salto temporal (jump cut) entre el fin de un beat y el inicio del siguiente debe ser de al menos 3 a 5 segundos de material omitido.
+## Separación entre beats y UNIDAD TEMÁTICA (CRUCIAL — EVITAR CLIPS FRANKENSTEIN)
+- Cada clip DEBE tener una UNIDAD TEMÁTICA CLARA: debe abordar UN solo tema, anécdota, debate o historia específica.
+- NUNCA unas frases de partes totalmente inconexas del video que hablen de cosas distintas solo para forzar un salto.
+- Los jump cuts se usan para condensar esa misma idea (saltando rodeos, silencios, muletillas o digresiones secundarias dentro de ese mismo bloque de contenido, típicamente dentro de una ventana de 30 a 120 segundos del video original, o conectando un planteamiento inicial con su conclusión directa).
+- Al escuchar el clip completo, debe sonar como un pensamiento fluido, lógico y coherente, como si el orador lo hubiera dicho de seguido con dinamismo.
+- Si hay jump cut entre beats, debe haber al menos 2 a 5 segundos de material omitido (silencio o rodeo saltado).
 
-## Si generas más de 1 clip
-- Cada clip debe tratar un ángulo o momento clave diferente del video.
+## Diversidad entre clips (REGLA FUNDAMENTAL)
+- Cada clip DEBE tener un GANCHO (hook) completamente DIFERENTE y abordar una temática o momento distinto del video.
+- Evita repetir los mismos beats entre clips; distribuye el contenido del video para que cada una de las 4 opciones sea una experiencia única y valiosa para el usuario.
+
+# REGLA SUPREMA: COHERENCIA DEL DISCURSO Y ORACIONES COMPLETAS (100% OBLIGATORIO)
+- La coherencia discursiva y el sentido completo de las frases MANDA SOBRE TODO LO DEMÁS.
+- Cada beat DEBE ser una o más oraciones completas con sentido retórico cerrado. NUNCA cortes una idea a la mitad.
+- NUNCA termines un beat o un clip con conectores colgantes (ej: "por ejemplo", "es que", "pero", "y", "porque", "o sea", "es decir", "como"). El clip y cada beat deben tener cierre natural.
+- Sobre los cortes de escena ('sceneCuts'): son ÚNICAMENTE una referencia visual opcional. NO fuerces cortes de audio por un sceneCut. Si hay un cambio de plano en medio de una frase o idea interesante, deja que la frase termine completa; el motor de la app ajusta el encuadre automáticamente en video sin cortar el audio.
 
 # REGLAS DE GROUNDING (ANTI-ALUCINACIÓN)
 - SOLO usa palabras TEXTUALES que aparezcan en la transcripción.
@@ -88,10 +93,10 @@ Recibirás una transcripción de un video con timestamps por palabra. Debes crea
 
 # PROCESO DE VALIDACIÓN ANTES DE RESPONDER
 Antes de devolver tu respuesta, verifica:
-1. ¿Cada beat dura al menos 5 segundos? Si no, extiéndelo hasta completar la oración.
-2. ¿La suma de beats de cada clip es >= 25 segundos? Si no, agrega otro beat.
-3. ¿Los beats vienen de secciones SEPARADAS del video (>15s entre ellos)? Si no, busca fragmentos de otras partes.
-4. ¿Las frases tienen sentido completo y no cortan a mitad de oración? Si no, ajusta el end hasta el final de la oración.
+1. ¿Cada beat dura al menos 4 segundos y contiene oraciones completas? Si no, extiéndelo.
+2. ¿La suma de beats de cada clip cumple la duración pedida (por defecto 20-40s)? Si no, ajusta los beats.
+3. ¿El clip tiene UNIDAD TEMÁTICA clara y coherente (trata sobre un solo tema o anécdota sin saltar a temas inconexos que creen una idea rara)? Si no, reenfoca los beats en esa misma idea.
+4. ¿Las frases tienen sentido completo y NO cortan a mitad de oración ni terminan en conectores como 'por ejemplo' o 'pero'? Si no, incluye la oración complementaria o cambia el beat.
 
 # FORMATO DE RESPUESTA (JSON)
 {
@@ -108,19 +113,19 @@ Antes de devolver tu respuesta, verifica:
       },
       "storyBeats": [
         {
-          "start": <timestamp inicio>,
-          "end": <timestamp fin>,
+          "start": <timestamp inicio del hook>,
+          "end": <timestamp fin del hook>,
           "role": "hook",
           "text": "<Frase textual completa>"
         },
         {
-          "start": <timestamp inicio de OTRA sección>,
+          "start": <timestamp inicio del desarrollo>,
           "end": <timestamp fin>,
           "role": "conflict",
           "text": "<Frase textual completa>"
         },
         {
-          "start": <timestamp inicio de OTRA sección>,
+          "start": <timestamp inicio del desenlace>,
           "end": <timestamp fin>,
           "role": "solution",
           "text": "<Frase textual completa>"
@@ -191,19 +196,18 @@ Antes de devolver tu respuesta, verifica:
     const genre = data.genre || 'general';
 
     // F2: Pass 1 determinista (sin LLM): pre-ranking heurístico de oraciones.
-    // FIX-regresión: repartir por tercios del video para que la guía no se
-    // concentre en la zona de más energía (eso colapsaba los beats en una
-    // sola porción sin jump cuts). El LLM compone (Pass 2).
+    // Repartir por cuartos del video para distribuir los candidatos en toda la línea temporal.
     const ranked = [...sentences]
       .map((s) => ({ s, score: this.scoreCandidate(s) }))
       .sort((a, b) => b.score - a.score);
     const span = Math.max(1, data.videoDuration);
-    const thirds: Array<typeof ranked> = [[], [], []];
+    const bucketsCount = Math.min(4, Math.max(2, targetClipCount));
+    const buckets: Array<typeof ranked> = Array.from({ length: bucketsCount }, () => []);
     for (const r of ranked) {
-      const bucket = Math.min(2, Math.floor((r.s.start / span) * 3));
-      if (thirds[bucket].length < 4) thirds[bucket].push(r);
+      const bIdx = Math.min(bucketsCount - 1, Math.floor((r.s.start / span) * bucketsCount));
+      if (buckets[bIdx].length < 4) buckets[bIdx].push(r);
     }
-    const topCandidates = thirds
+    const topCandidates = buckets
       .flat()
       .sort((a, b) => a.s.start - b.s.start);
     const candidatesHint =
@@ -211,8 +215,16 @@ Antes de devolver tu respuesta, verifica:
         ? topCandidates.map(({ s, score }) => `${s.id}(score:${score})`).join(', ')
         : 'ninguno (video muy corto)';
 
+    const sceneCutsSummary =
+      data.sceneCuts && data.sceneCuts.length > 0
+        ? data.sceneCuts
+            .slice(0, 30)
+            .map((c) => `${c.toFixed(1)}s`)
+            .join(', ')
+        : 'ninguno reportado';
+
     const userPrompt = `
-Analiza esta transcripción y crea de 1 a 3 clips virales maestros con multi-cortes (jump cuts entre secciones separadas del video).
+Analiza esta transcripción y crea ${targetClipCount} opciones distintas de clips virales maestros (cada una explorando un tema, momento o gancho diferente del video) con multi-cortes (jump cuts dinámicos que eliminan rodeos y silencios dentro de cada tema).
 
 DATOS DEL VIDEO:
 - Video ID: ${data.videoId}
@@ -224,17 +236,19 @@ DATOS DEL VIDEO:
 - Total de palabras transcritas: ${compactedWords.length}
 - Total de oraciones segmentadas: ${sentences.length}
 - Silencios detectados (vDSP, para saltar): ${silenceSummary}
+- Cortes de escena visuales detectados en el video (referencia visual opcional): ${sceneCutsSummary}
 
 CÓMO ELEGIR (rúbrica):
 - Prioriza oraciones con maxDb alto (énfasis vocal), PREGUNTA, CON_NUMERO, NEGACION, CONTRASTE o ENFASIS.
 - Penaliza MUCHAS_MULETILLAS y wpm anormal (<90 o >220).
 - El hook (primer beat) debe ser autocontenido y con curiosity gap en <3s de lectura.
-- Cada beat = 1+ oraciones completas (usa sus IDs). NUNCA cortes a mitad de oración.
+- Cada beat = 1+ oraciones completas (usa sus IDs). NUNCA cortes a mitad de oración ni dejes frases colgando en conectores ("por ejemplo", "pero", "y", "porque").
+- CADA CLIP DEBE TENER UNIDAD TEMÁTICA: debe tratar sobre una sola idea o anécdota. Usa los jump cuts para condensar esa misma idea (quitar rodeos y pausas), NUNCA para pegar temas inconexos de minutos distintos.
 
-PASS 1 — CANDIDATOS PRE-SELECCIONADOS POR AUDIO+TEXTO (repartidos por inicio/medio/fin del video para forzar multi-corte; úsalos como guía, puedes variar 1-2):
+PASS 1 — CANDIDATOS PRE-SELECCIONADOS POR AUDIO+TEXTO (repartidos por inicio/medio/fin del video para forzar variedad entre clips; úsalos como guía, puedes variar 1-2):
 ${candidatesHint}
 
-RECORDATORIO: Cada clip debe tener entre 20 y 60 segundos NETOS (suma de sus beats, o lo que pida la duración objetivo). Cada beat individual debe durar entre 4 y 18 segundos y contener una ORACIÓN COMPLETA con sentido. Los beats deben venir de momentos separados del video (>15s entre ellos), saltando rodeos y silencios.
+RECORDATORIO: Cada clip debe tener entre 20 y 60 segundos NETOS (suma de sus beats, o lo que pida la duración objetivo). Cada clip DEBE TENER UNIDAD TEMÁTICA (una sola idea, anécdota o reflexión coherente). Usa los jump cuts para quitar pausas y rodeos de esa misma idea, NO para pegar fragmentos de temas inconexos. Cada beat individual debe durar entre 4 y 18 segundos y contener una ORACIÓN COMPLETA con sentido y cierre. NUNCA cortes una frase a la mitad.
 
 ORACIONES (fuente de verdad para timestamps — usa estos start/end exactos):
 ${sentenceBlock}
@@ -320,6 +334,7 @@ ${JSON.stringify(compactedWords)}
         videoDuration: data.videoDuration,
         targetMinNet: target.min,
         targetMaxNet: target.max,
+        targetClipCount,
       });
       this.logger.log(
         `[GeminiService] Saneo: ${sanitized.length} clips del LLM -> ${repaired.length} clips válidos (net objetivo ${target.min}-${target.max}s)`,
@@ -359,171 +374,6 @@ ${JSON.stringify(compactedWords)}
     endsWithPause: boolean;
   }): number {
     return SentenceSegmenterService.scoreCandidate(s);
-  }
-
-  // MARK: - Análisis visual de frames (Gemini vision, sin Vision on-device)
-  private static readonly FRAMES_SYSTEM = `
-Eres un clasificador visual para un editor de video vertical 9:16. Recibirás fotos numeradas (FRAME <id>) extraídas de UN SOLO video (talking-head y/o pantalla compartida).
-
-Por CADA frame devuelve exactamente un objeto con:
-- "id": el mismo id del frame, textual.
-- "scene": una de talking_head | screen_share | pip | multi_speaker | no_person | unclear
-  - talking_head: una persona a cámara ocupa el plano (aunque haya fondo/oficina).
-  - screen_share: solo pantalla (código, slides, app, web). Nadie visible.
-  - pip: pantalla + ventanita con la persona (picture-in-picture).
-  - multi_speaker: dos o más personas visibles a cámara.
-  - no_person: ni persona ni pantalla relevante (paisaje, objeto, negro).
-  - unclear: no se distingue / imagen corrupta.
-- "speakerZone": tercio horizontal donde está la MASA VISUAL de la persona (cabeza+cuerpo) o la ventanita PiP: left | center | right. Si ocupa todo el ancho: fullscreen. Si no hay persona: none.
-- "pipCorner": SOLO si scene=pip, esquina de la ventanita: topLeft | topRight | bottomLeft | bottomRight. En otro caso: none.
-- "confidence": 0.0 a 1.0.
-- "faceX": entero GRUESO 0-100 con el centro horizontal aproximado de la cara (talking_head/multi_speaker) o de la ventanita (pip). 50 = centro. -1 si no hay persona visible. No busques precisión de píxeles: redondea a múltiplos de 5.
-- "faceY": entero GRUESO 0-100 con el centro VERTICAL aproximado de la CARA (0 = arriba del todo, 100 = abajo del todo), múltiplos de 5. -1 si no hay persona.
-- "faceW": entero GRUESO del ANCHO de la cara (solo cara, sin cuerpo ni pelo) como % del ancho del frame, múltiplos de 10 (ej: close-up ~30, plano medio ~20, ventanita PiP ~10). -1 si no hay persona.
-
-REGLAS DE ORO:
-1. Si dudas entre dos opciones, elige "unclear" con confidence <= 0.4. NUNCA adivines.
-2. Una cara DENTRO de la pantalla (foto, thumbnail, videollamada) NO es el speaker: si la persona real no está a cámara, es screen_share (o pip solo si hay ventanita webcam real separada).
-3. Responde SOLO JSON válido con esta forma exacta, sin markdown ni texto extra:
-{"status":"success","frames":[{"id":"<id>","scene":"<scene>","speakerZone":"<zone>","pipCorner":"<corner>","confidence":0.0,"faceX":50,"faceY":40,"faceW":30}]}
-`.trim();
-
-  /**
-   * Clasifica frames JPEG (thumbnails 320px) con Gemini vision.
-   * Diseñado para ~18 frames por video (2-3 clips × 3 beats × 2 thumbs).
-   */
-  async analyzeFrames(data: AnalyzeFramesDto): Promise<FramesResponseDto> {
-    if (!data.frames || data.frames.length === 0) {
-      return { status: 'success', frames: [] };
-    }
-
-    // Parts intercalados: etiqueta corta + imagen (ahorra tokens vs repetir instrucciones)
-    const parts: Array<Record<string, unknown>> = [
-      {
-        text: `Clasifica estos ${data.frames.length} frames del video ${data.videoId} (idioma: ${data.language || 'auto'}). Devuelve un objeto por frame en el JSON de respuesta.`,
-      },
-    ];
-    for (const f of data.frames) {
-      const label = [f.id, f.role ? `rol:${f.role}` : null, `@${f.timestamp.toFixed(1)}s`]
-        .filter(Boolean)
-        .join(' ');
-      parts.push({ text: `FRAME ${label}:` });
-      parts.push({
-        inlineData: { mimeType: 'image/jpeg', data: f.imageBase64 },
-      });
-    }
-
-    try {
-      const totalBytes = data.frames.reduce((s, f) => s + (f.imageBase64?.length ?? 0), 0);
-      this.logger.log(
-        `[GeminiVision] Analizando ${data.frames.length} frames (${(totalBytes / 1024).toFixed(0)}KB b64) del video ${data.videoId}...`,
-      );
-
-      const response = await this.ai.models.generateContent({
-        model: this.modelName,
-        contents: parts as any,
-        config: {
-          systemInstruction: GeminiService.FRAMES_SYSTEM,
-          responseMimeType: 'application/json',
-          temperature: 0.1,
-        },
-      });
-
-      const rawText = response.text || '{}';
-      this.logger.debug(`[GeminiVision] Raw: ${rawText.slice(0, 800)}`);
-
-      // Trace SIN los base64 (si no el log pesa MB)
-      await this.saveTrace(`${data.videoId}-frames`, {
-        videoId: data.videoId,
-        createdAt: new Date().toISOString(),
-        model: this.modelName,
-        kind: 'frames',
-        stats: {
-          frames: data.frames.length,
-          base64KB: Math.round(totalBytes / 1024),
-        },
-        frameMeta: data.frames.map((f) => ({
-          id: f.id,
-          timestamp: f.timestamp,
-          clipId: f.clipId,
-          beatId: f.beatId,
-          role: f.role,
-          bytes: f.imageBase64?.length ?? 0,
-        })),
-        rawResponse: rawText,
-      });
-
-      let parsed: any = {};
-      try {
-        parsed = JSON.parse(rawText);
-      } catch {
-        this.logger.warn('[GeminiVision] Respuesta no-JSON, marcando todo unclear');
-      }
-
-      const requestedIds = data.frames.map((f) => f.id);
-      const byId = new Map<string, any>(
-        (Array.isArray(parsed.frames) ? parsed.frames : []).map((r: any) => [String(r?.id ?? ''), r]),
-      );
-      const frames: FrameAnalysisDto[] = requestedIds.map((id) =>
-        this.sanitizeFrame(id, byId.get(id)),
-      );
-
-      const unclear = frames.filter((f) => f.scene === 'unclear').length;
-      this.logger.log(
-        `[GeminiVision] Listo: ${frames.length} frames (${unclear} unclear) para ${data.videoId}`,
-      );
-      return { status: 'success', frames };
-    } catch (error: any) {
-      this.logger.error(
-        `[GeminiVision] Error: ${error?.message || error}`,
-        error?.stack,
-      );
-      // Fallback total: todo unclear para que iOS use defaults seguros (nunca crashea)
-      return {
-        status: 'success',
-        frames: data.frames.map((f) => ({
-          id: f.id,
-          scene: 'unclear' as const,
-          speakerZone: 'none' as const,
-          pipCorner: 'none' as const,
-          confidence: 0,
-          faceX: -1,
-          faceY: -1,
-          faceW: -1,
-        })),
-      };
-    }
-  }
-
-  /** Sanea UN frame contra whitelists; lo desconocido -> unclear/none/0. */
-  sanitizeFrame(id: string, raw: any): FrameAnalysisDto {
-    const scene = FRAME_SCENES.includes(raw?.scene) ? raw.scene : 'unclear';
-    const speakerZone = SPEAKER_ZONES.includes(raw?.speakerZone)
-      ? raw.speakerZone
-      : 'none';
-    let pipCorner = PIP_CORNERS.includes(raw?.pipCorner) ? raw.pipCorner : 'none';
-    if (scene !== 'pip') pipCorner = 'none';
-    let confidence = typeof raw?.confidence === 'number' ? raw.confidence : 0;
-    if (!Number.isFinite(confidence)) confidence = 0;
-    confidence = Math.max(0, Math.min(1, Math.round(confidence * 100) / 100));
-    if (scene === 'unclear') confidence = Math.min(confidence, 0.4);
-    // faceX grueso 0-100, -1 si no hay persona
-    let faceX = typeof raw?.faceX === 'number' ? Math.round(raw.faceX / 5) * 5 : -1;
-    if (!Number.isFinite(faceX)) faceX = -1;
-    const hasPerson = scene === 'talking_head' || scene === 'pip' || scene === 'multi_speaker';
-    if (!hasPerson) faceX = -1;
-    else if (faceX < 0 || faceX > 100) faceX = -1;
-    // faceY grueso 0-100, -1 si no hay persona
-    let faceY = typeof raw?.faceY === 'number' ? Math.round(raw.faceY / 5) * 5 : -1;
-    if (!Number.isFinite(faceY)) faceY = -1;
-    if (!hasPerson) faceY = -1;
-    else if (faceY < 0 || faceY > 100) faceY = -1;
-    // faceW grueso (múltiplos de 10), -1 si no hay persona
-    let faceW = typeof raw?.faceW === 'number' ? Math.round(raw.faceW / 10) * 10 : -1;
-    if (!Number.isFinite(faceW)) faceW = -1;
-    if (!hasPerson) faceW = -1;
-    else if (faceW <= 0 || faceW > 100) faceW = -1;
-    return { id, scene, speakerZone, pipCorner, confidence, faceX, faceY, faceW };
   }
 
   private async saveTrace(videoId: string, trace: unknown): Promise<void> {    try {

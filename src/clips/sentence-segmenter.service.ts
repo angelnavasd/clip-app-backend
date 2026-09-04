@@ -38,6 +38,14 @@ const SUPERLATIVE_RE =
 const NUMBER_RE = /\d|uno|dos|tres|cinco|diez|cien|mil|mill[óo]n|one|two|three|five|ten|hundred|thousand/i;
 const SENT_END_RE = /[.!?…]+$/;
 
+const DANGLING_END_RE =
+  /\b(el|la|los|las|un|una|unos|unas|de|del|al|a|en|con|por|para|sin|sobre|hacia|desde|que|y|o|u|e|pero|sino|si|porque|cuando|donde|como|aunque|se|me|te|le|nos|les|lo|mi|tu|su|este|esta|estos|estas|the|a|an|of|in|to|for|with|on|at|from|by|and|or|but|that|which|who|if|because|when|where)\s*[,;:]?$/i;
+
+const HANGING_CONNECTOR_RE =
+  /\b(por ejemplo|es decir|o sea|como por ejemplo|tales como|en plan|es que|creo que|siento que)\s*[,;:]?$/i;
+
+const CLAUSE_PUNCT_RE = /[,;:]$/;
+
 function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
@@ -124,10 +132,10 @@ export class SentenceSegmenterService {
 
       const next = sorted[i + 1];
       const gapToNext = next ? Math.max(0, next.start - w.end) : 0;
-      const endsWithPunct = SENT_END_RE.test(w.word.trim());
-      const hitsMaxWords = current.length >= MAX_WORDS_PER_SENTENCE;
+      const wordTrim = w.word.trim();
+      const endsWithPunct = SENT_END_RE.test(wordTrim);
+      const endsWithClausePunct = CLAUSE_PUNCT_RE.test(wordTrim);
       const currentDur = w.end - current[0].start;
-      const hitsMaxDur = currentDur >= MAX_SECONDS_PER_SENTENCE;
       const longPause = next ? gapToNext >= PAUSE_SPLIT_THRESHOLD_S : true;
       const inSilenceGap = silenceGaps.some(
         (g) => w.end >= g.start && next && next.start <= g.end,
@@ -135,18 +143,47 @@ export class SentenceSegmenterService {
 
       if (!next) {
         flush(i + 1, 0);
-      } else if (
-        endsWithPunct ||
-        hitsMaxWords ||
-        hitsMaxDur ||
-        longPause ||
-        inSilenceGap
-      ) {
-        // Evitar oraciones de 1-2 palabras salvo que haya pausa real larga
-        if (current.length <= 2 && !endsWithPunct && gapToNext < 1.2) {
+        break;
+      }
+
+      // 1. Puntuación fuerte de fin de oración (. ! ? …)
+      if (endsWithPunct) {
+        flush(i + 1, gapToNext);
+        continue;
+      }
+
+      // Comprobar si la palabra o frase actual queda colgando
+      const isDangling =
+        DANGLING_END_RE.test(wordTrim) ||
+        HANGING_CONNECTOR_RE.test(current.slice(-3).map((cw) => cw.word).join(' ').trim());
+
+      // 2. Silencio de audio prolongado (vDSP) o pausa oral natural (>= 0.6s)
+      if ((inSilenceGap || longPause) && !isDangling) {
+        // Evitar oraciones de 1-2 palabras salvo que haya pausa muy larga
+        if (current.length <= 2 && gapToNext < 1.2) {
           continue;
         }
         flush(i + 1, gapToNext);
+        continue;
+      }
+
+      // 3. Cláusula intermedia larga (oración de >22 palabras o >10s con coma + pausa intermedia)
+      const isLongAccumulation = current.length >= 22 || currentDur >= 10;
+      if (
+        isLongAccumulation &&
+        endsWithClausePunct &&
+        gapToNext >= 0.25 &&
+        !isDangling
+      ) {
+        flush(i + 1, gapToNext);
+        continue;
+      }
+
+      // 4. Pausa de respiración en oraciones extra largas (>32 palabras con pausa >= 0.4s)
+      const isVeryLong = current.length >= 32 || currentDur >= 15;
+      if (isVeryLong && gapToNext >= 0.4 && !isDangling) {
+        flush(i + 1, gapToNext);
+        continue;
       }
     }
 

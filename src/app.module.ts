@@ -5,7 +5,6 @@ import { AppService } from './app.service.js';
 import { GeminiModule } from './gemini/gemini.module.js';
 import { ClipsModule } from './clips/clips.module.js';
 import { AssetsModule } from './assets/assets.module.js';
-import { IngestModule } from './ingest/ingest.module.js';
 
 @Module({
   imports: [
@@ -16,7 +15,6 @@ import { IngestModule } from './ingest/ingest.module.js';
     GeminiModule,
     ClipsModule,
     AssetsModule,
-    IngestModule,
   ],
   controllers: [AppController],
   providers: [AppService],

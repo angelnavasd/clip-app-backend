@@ -1,0 +1,183 @@
+{
+  "videoId": "local-D6BE1C24",
+  "createdAt": "2026-09-04T04:26:07.145Z",
+  "target": {
+    "min": 20,
+    "max": 40
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El misterioso modelo que destronó a DeepSeek y confundió a Google",
+      "viralScore": 95,
+      "hook": "recordemos que Deep -Six lanzó hace poco Deep -Six V4 Flash, este que fue, bueno, falaba locura porque también era muy económico, logró suirón de precios, bueno, a todo este tema, bueno aquí hice luego de 56 días seguido, estándon Deep -Six en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido,",
+      "timeRange": {
+        "start": 152.48,
+        "end": 343.16
+      },
+      "cutSegments": [
+        {
+          "start": 171.64,
+          "end": 228.2,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 248.4,
+          "end": 333.48,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "destronó",
+          "timestamp": 165.3,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "Gemini",
+          "timestamp": 239.9,
+          "color": "#FF3366",
+          "sfx": "pop"
+        },
+        {
+          "word": "flash",
+          "timestamp": 341.3,
+          "color": "#00FFCC",
+          "sfx": "bell"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 152.48,
+          "end": 171.64,
+          "role": "hook",
+          "text": "recordemos que Deep -Six lanzó hace poco Deep -Six V4 Flash, este que fue, bueno, falaba locura porque también era muy económico, logró suirón de precios, bueno, a todo este tema, bueno aquí hice luego de 56 días seguido, estándon Deep -Six en el puesto número 1, lo destronó el OX Alpha con 2 .6 trillones de tokens consumido,",
+          "needsFace": true,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S20",
+            "S21"
+          ]
+        },
+        {
+          "start": 228.2,
+          "end": 248.4,
+          "role": "conflict",
+          "text": "de google y lo solamente eso sino que claro uno como a ver no así en si a cierta no se ha hecho ninguna nuzena entonces no sabe realmente si lo que se está diciendo es real o no porque en un momento yo pensé que era Gemini yo dije que estamos hablando de Gemini 4 pero algo por el estilo porque claro lo",
+          "needsFace": false,
+          "energyScore": 63,
+          "sentenceIds": [
+            "S31",
+            "S32"
+          ]
+        },
+        {
+          "start": 333.48,
+          "end": 343.16,
+          "role": "solution",
+          "text": "no me equivoco hace dos días, el 26 creo o el 25, no estoy tan tan seguro, pero bueno, se supo que el modelo era gm5 .3 flash y empezaron algunos que",
+          "needsFace": false,
+          "energyScore": 73,
+          "sentenceIds": [
+            "S45"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clip_02",
+      "title": "El poder del anonimato en la Inteligencia Artificial",
+      "viralScore": 93,
+      "hook": "porque creo que acá el hype, de un modelo que literalmente no tiene marca, todo El presupuesto de marketing de OEX Alpha fue de 0 dólares.",
+      "timeRange": {
+        "start": 557.06,
+        "end": 693.06
+      },
+      "cutSegments": [
+        {
+          "start": 565.28,
+          "end": 570.56,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 576.24,
+          "end": 670.66,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 675.8,
+          "end": 678.68,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "marketing",
+          "timestamp": 562.7,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "fuerte",
+          "timestamp": 674.8,
+          "color": "#FF3366",
+          "sfx": "impact"
+        },
+        {
+          "word": "internet",
+          "timestamp": 692.8,
+          "color": "#00FFCC",
+          "sfx": "cheering"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 557.06,
+          "end": 565.28,
+          "role": "hook",
+          "text": "porque creo que acá el hype, de un modelo que literalmente no tiene marca, todo El presupuesto de marketing de OEX Alpha fue de 0 dólares.",
+          "needsFace": true,
+          "energyScore": 79,
+          "sentenceIds": [
+            "S87"
+          ]
+        },
+        {
+          "start": 570.56,
+          "end": 576.24,
+          "role": "conflict",
+          "text": "y dominó la conversación más que cualquier cosa que Google enviar a todo el trimestre.",
+          "needsFace": false,
+          "energyScore": 55,
+          "sentenceIds": [
+            "S89"
+          ]
+        },
+        {
+          "start": 670.66,
+          "end": 675.8,
+          "role": "climax",
+          "text": "Cuando cada compañía grita, mira nuestro modelo la que no dice nada se convierte en la más fuerte de la sala.",
+          "needsFace": false,
+          "energyScore": 63,
+          "sentenceIds": [
+            "S105"
+          ]
+        },
+        {
+          "start": 678.68,
+          "end": 693.06,
+          "role": "solution",
+          "text": "cuando salió el Deepseek V4 Flash, es lo que el memera Deepseek pasa 6 meses sin decir absolutamente nada, sin decir ningún comunicado absurta de tina y, repente, aparece como un modelo que rompa el internet.",
+          "needsFace": false,
+          "energyScore": 65,
+          "sentenceIds": [
+            "S107",
+            "S108"
+          ]
+        }
+      ]
+    }
+  ]
+}

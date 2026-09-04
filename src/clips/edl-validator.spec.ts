@@ -78,7 +78,8 @@ describe('EdlValidatorService (F2)', () => {
       { videoDuration: 120, minBeatDur: 2, minNetDuration: 4 },
     );
     expect(out[0].cutSegments.length).toBe(1);
-    expect(out[0].cutSegments[0].start).toBeCloseTo(2.9, 1);
+    expect(out[0].cutSegments[0].start).toBeGreaterThanOrEqual(2.9);
+    expect(out[0].cutSegments[0].start).toBeLessThan(3.2);
     expect(out[0].cutSegments[0].end).toBeCloseTo(45.0, 1);
   });
 

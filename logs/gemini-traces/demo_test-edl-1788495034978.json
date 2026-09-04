@@ -1,0 +1,88 @@
+{
+  "videoId": "demo_test",
+  "createdAt": "2026-09-04T04:10:34.978Z",
+  "target": {
+    "min": 20,
+    "max": 60
+  },
+  "clips": [
+    {
+      "id": "clip_01",
+      "title": "El Secreto del Contenido Viral",
+      "viralScore": 92,
+      "hook": "Hola a todos hoy les voy a contar el mayor secreto para crear contenido viral en internet.",
+      "timeRange": {
+        "start": 0,
+        "end": 31.4
+      },
+      "cutSegments": [
+        {
+          "start": 7.55,
+          "end": 7.65,
+          "reason": "jump_cut"
+        },
+        {
+          "start": 23.3,
+          "end": 23.4,
+          "reason": "jump_cut"
+        }
+      ],
+      "highlightWords": [
+        {
+          "word": "secreto",
+          "timestamp": 4.5,
+          "color": "#FFCC00",
+          "sfx": "whoosh"
+        },
+        {
+          "word": "historia",
+          "timestamp": 19.8,
+          "color": "#FFCC00",
+          "sfx": "pop"
+        },
+        {
+          "word": "multiplicar",
+          "timestamp": 29.2,
+          "color": "#FFCC00",
+          "sfx": "cash_register"
+        }
+      ],
+      "storyBeats": [
+        {
+          "start": 0,
+          "end": 7.55,
+          "role": "hook",
+          "text": "Hola a todos hoy les voy a contar el mayor secreto para crear contenido viral en internet.",
+          "needsFace": true,
+          "energyScore": 45,
+          "sentenceIds": [
+            "S01"
+          ]
+        },
+        {
+          "start": 7.65,
+          "end": 23.3,
+          "role": "conflict",
+          "text": "Muchas personas piensan que necesitas una camara cara de diez mil dolares pero la realidad es que el contenido que triunfa es el que cuenta una buena historia y engancha en los primeros tres segundos.",
+          "needsFace": false,
+          "energyScore": 45,
+          "sentenceIds": [
+            "S02",
+            "S03"
+          ]
+        },
+        {
+          "start": 23.4,
+          "end": 31.4,
+          "role": "solution",
+          "text": "Si logras capturar la atencion al inicio y dar valor inmediato vas a multiplicar tus visualizaciones por diez.",
+          "needsFace": false,
+          "energyScore": 45,
+          "sentenceIds": [
+            "S04"
+          ]
+        }
+      ]
+    }
+  ]
+}
