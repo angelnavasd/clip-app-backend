@@ -10,6 +10,7 @@ dist/
 # Logs
 *.log
 npm-debug.log*
+logs/
 
 # OS Files
 .DS_Store
